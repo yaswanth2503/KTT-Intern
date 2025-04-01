@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar Number Input</title>
+    <link rel="icon" href="aadhar.ico">
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           font-size: 20px;
+        }
+     .aadhaar-container {
+        display: inline-block;
+        margin-right: 20px;
+     }
+
+     .aadhaar-container input{
+        border: 1px solid black;
+        padding: 5px;
+        outline: none;
+        width: 40px;
+       
+      
+     }
+
+        table{
+            border-collapse: collapse;
+            border: 3px solid rgb(95, 95, 95);
+            margin: 5px;
+           
+        }
+      td{
+        padding: 5px;
+        border: 3px solid rgb(95, 95, 95);
+
+      }
+    
+
+      .dob{
+        margin-left: 80px;
+      }
+      .sign{
+        float: right;
+      }
+      h2{
+        color: white;
+        background-color: rgb(248, 56, 56);
+        padding: 8px;
+      }
+      .instructions{
+        color:rgb(248, 56, 56);
+        float: right;
+      }
+
+      .container {
+            width: 95%; 
+            margin: 0 auto; 
+        }
+      
+    </style>
+</head>
+<body>
+
+    <img src="aadhar_logo.png" alt="aadhar logo" width="95%" height="" >
+    <center><h2>AADHAR ENROLMENT/CORRECTION/UPDATE FORM</h2></center>
+   <div class="container">
+
+
+
+<p>Aadhaar Enrolment and Mandatory Biometric Update is free.
+     No charges are applicable for Form. In case of
+      Correction/ Update, provide your Aadhaar Number
+    (UID), Full Name and only that field which needs
+     Correction/ Update.
+</p>
+<span>
+<input type="checkbox"/>
+<label for="resident">Resident</label>
+<input type="checkbox"/>
+<label for="non-resident">Non-Resident Indian(NRI*)</label>
+</span>
+<span class="instructions">
+    Please follow the instructions overleaf while filling up the
+     form. Use capital letters only
+</span>
+
+
+<table border="1">
+    <tr>
+        <td align="center">1</td>
+        <td>Pre Enrolment ID (If applicable):</td>
+        <td align="center">2</td>
+        <td>
+           
+            <label for="aadhaar1">In case of Update provide Aadhaar Number (UID):</label><br>
+            <div class="aadhaar-container">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+               
+            </div>
+            <div class="aadhaar-container">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+               
+            </div>
+            <div class="aadhaar-container">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+               
+            </div>
+    </td>
+</tr>
+
+<tr>
+    <td align="center">2.1</td>
+    <td colspan="3">
+        <input type="checkbox"/>
+        <label for="bio">Biometric Update (Photo + Fingerprint + Iris)</label>
+        <input type="checkbox"/>
+        <label for="mobile">Mobile</label>  
+        <input type="checkbox"/>
+        <label for="dob">Date of Birth</label>  
+        <input type="checkbox"/>
+        <label for="address">Address</label>  
+        <input type="checkbox"/>
+        <label for="name">Name</label>  
+        <input type="checkbox"/>
+        <label for="gender">Gender</label>  
+        <input type="checkbox"/>
+        <label for="email">Email</label>  
+    </td>
+</tr>
+
+<tr>
+    <td align="center" >3</td>
+    <td colspan="3">Full Name:</td>
+
+</tr>
+
+<tr>
+    <td align="center">4</td>
+    <td>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="male" value="male"/>
+        <label for="male">Male</label>  
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label> 
+        <input type="radio" name="gender" id="trans" value="trans"/>
+        <label for="trans">Transgender</label> 
+    </td>
+    <td align="center">5</td>
+    <td>
+        <label for="age">Age:  Yrs  OR Date of Birth:</label>
+        <input type="date"><br>
+        <input type="checkbox" name="declared" id="declared" class="dob">
+        <label for="declared">Declared</label>
+        <input type="checkbox" name="Verified" id="Verified" class="dob">
+        <label for="Verified">Verified</label>
+    </td>
+
+</tr>
+
+<tr>
+    <td rowspan="6" align="center">6</td>
+    <td colspan="3">Address: C/o </td>
+</tr>
+
+<tr>
+    <td>House No./ Bldg./ Apt: </td>
+    <td colspan="2">Street/ Road/ Lane:</td>
+</tr>
+
+<tr>
+    <td>Landmark: </td>
+    <td colspan="2">Area/ Locality/ Sector:</td>
+</tr>
+
+<tr>
+    <td>Village/ Town/ City: </td>
+    <td colspan="2">Post Office:</td>
+</tr>
+
+<tr>
+    <td>District:</td>
+    <td style="width:200px;">Sub-District:</td>
+    <td>State:</td>
+</tr>
+
+<tr>
+    <td>E-Mail:</td>
+    <td>Mobile No.:</td>
+    <td>PIN Code:</td>
+</tr>
+
+<tr>
+    <td align="center" rowspan="3">7</td>
+    <td colspan="3">
+        <label for="details">Details of:</label>
+        <input type="checkbox" name="details" value="father" class="dob">
+        <label for="father">Father</label>
+        <input type="checkbox" name="mother" value="mother"class="dob">
+        <label for="mother">Mother</label>
+        <input type="checkbox" name="guardian" value="guardian"class="dob">
+        <label for="guardian">Guardian</label>
+        <input type="checkbox" name="husband" value="husband"class="dob">
+        <label for="husband">Husband</label>
+        <input type="checkbox" name="wife" value="wife"class="dob">
+        <label for="wife">Wife</label>  
+        <p>
+            For children below 5 years Father/Mother/Guardian’s details are mandatory. 
+            Adults can opt not to specify this information.
+        </p>
+    </td>
+</tr>
+<tr>
+    <td colspan="3">Name:</td>
+    
+    
+</tr>
+
+<tr>
+    <td colspan="3">EID/ Aadhaar No.:</td>
+</tr>
+
+<tr>
+    <td colspan="4">
+    <label for="details1">Verification type</label>
+    <input type="checkbox" name="details1" value="document">
+    <label for="document">Document Based</label>
+    <input type="checkbox" name="details1" value="introducer">
+    <label for="introducer">Introducer Based</label>
+    <input type="checkbox" name="details1" value="head">
+    <label for="head">Head of Family (HoF) Based</label>
+    <p>Select only one of the above. Select Introducer or Head of Family only if you do not possess any documentary proof of identity and/
+        or address. Introducer and Head of Family details are not required 
+         in case of Document based verification.</p>
+    </td>
+</tr>
+
+<tr>
+    <td align="center">8</td>
+    <td colspan="3">For Document Based(Write Names of the documents produced. Refer overleaf of this form for list of valid documents)</td>
+     
+</tr>
+
+
+<tr>
+    <td colspan="3">a. POI</td>
+    <td colspan="3">b. POA</td>
+     
+</tr>
+
+<tr>
+    <td colspan="3">
+        c. DOB
+      <p> (Mandatory in case of Verified Date of Birth)</p> 
+    </td>
+    <td colspan="3">
+        d. POR
+        <p>(Mandatory in case of HoF based Enrolment/ Update)</p>
+    </td>
+     
+</tr>
+
+<tr>
+    <td align="center">9</td>
+    <td>
+        <p>For Introducer Based – Introducer’s</p>
+        <p>Aadhaar No.: </p>
+    </td>
+    <td colspan="3">
+        <label for="details2">For HoF Based - Details of</label>
+        <input type="checkbox" name="details2" value="father" >
+        <label for="father">Father</label>
+        <input type="checkbox" name="mother" value="mother">
+        <label for="mother">Mother</label>
+        <input type="checkbox" name="guardian" value="guardian">
+        <label for="guardian">Guardian</label>
+        <input type="checkbox" name="husband" value="husband">
+        <label for="husband">Husband</label>
+        <input type="checkbox" name="wife" value="wife">
+        <label for="wife">Wife</label>  
+        <p>HoF’s EID/ Aadhaar No.:</p>
+
+    </td>
+</tr>
+
+<tr>
+    <td colspan="4">
+<p>I hereby confirm the identity and address of_________________________________________as being true, correct and accurate.</p>
+
+<span>Introducer/ HoF’s Name: </span> <span class="sign">Signature of Introducer/ HoF</span>
+    </td>
+</tr>
+
+
+    
+
+
+</table>
+
+<p><strong>Disclosure under section 3(2) of THE AADHAAR (TARGETED DELIVERY OF FINANCIAL AND OTHER SUBSIDIES, BENEFITS AND SERVICES) ACT, 2016</strong>
+
+    I confirm that I have been residing in India for at least 182 days in the preceding 12 months / I am Non Resident Indian (NRI) & information (including biometrics)
+    provided by me to the UIDAI is my own and is true, correct and accurate. I am aware that my information including biometrics will be used for generation of Aadhaar
+    and authentication. I understand that my identity information (except core biometric) may be provided to an agency only with my consent during authentication or as
+    per the provisions of the Aadhaar Act. I have a right to access my identity information (except core biometrics) following the procedure laid down by UIDAI.</p>
+
+    <p>Verifier’s Stamp and Signature:</p>
+  <span> (Verifier must put his/ her Name, if stamp is not available)</span> 
+  <span class="sign">Applicant’s signature/ Thumbprint</span>
+  <p>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<span>To be filled by the Enrolment Agency only:</span>
+<span class="sign"> Date & time of Enrolment: 
+    <input type="date">
+</span>
+<p>Note: In case of minor, the signature will be done by parent/guardian. In case of incapacitated person, the signature will be done by Legal Guardian of Incapacitated Person
+   </p>
+   <p> * In case of NRI, only Indian Passport will be valid as POI.</p>
+
+
+
+
+
+
+
+
+
+</div>
+
+  
+
+</body>
+</html>
