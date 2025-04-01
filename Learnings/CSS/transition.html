@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Animation</title>
+
+<style>
+/* .square{ */
+    /* width: 300px;
+    height: 300px;
+    background-color: aquamarine; */
+    /* transition-duration: 3s;
+    transition-property: all; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-timing-function: linear;
+    transition-delay: 5s;
+     */
+
+/* } */
+
+/* .square:hover{ */
+    /* background-color: violet;
+    width: 500px; */
+    /* transform: rotatey(45deg);
+    transform: rotatex(45deg); */
+    /* transform: scaley(2); */
+    /* transform: translatey(-20px);
+
+
+}  */
+
+.box{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background-color: aquamarine;
+    animation-name: circle;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 10; /*infinite*/
+}
+
+@keyframes circle{
+    0%{
+        left: 0px;
+        top: 0px;
+    }
+
+    50%{
+        background-color: darkmagenta;
+        width: 50px;
+        height: 50px;
+        left: 200px;
+        top: 200px;
+    }
+    100%{
+        background-color: black;
+        width: 300px;
+        height: 300px;
+        left: 400px;
+        top: 400px;
+    }
+}
+
+</style>
+</head>
+<body>
+    
+<div class="square">
+
+</div>
+
+
+<div class="box">
+
+</div>
+
+
+</body>
+</html>

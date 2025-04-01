@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Exercise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        border: 3px solid black;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 10px;
+        width: 500px;
+       
+    }
+    
+    .grid-items{
+        width: 4vw;
+        height: 4vh;
+        background-color: red;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .box1{
+        grid-row:1;
+        grid-column: 3;
+    }
+
+    .box2{
+        grid-row:2;
+        grid-column: 3;
+    }
+    .box3{
+        grid-row:3;
+        grid-column: 1;
+    }
+    .box4{
+        grid-row:3;
+        grid-column: 2;
+    }
+    .box5{
+        grid-row:3;
+        grid-column: 3;
+    }
+
+    .box6{
+        grid-row:3;
+        grid-column: 4;
+   }
+
+    .box7{
+        grid-row:3;
+        grid-column: 5;
+    }
+
+    .box8{
+        grid-row:4;
+        grid-column: 3;
+    }
+
+    .box9{
+        grid-row:5;
+        grid-column: 3;
+    }
+
+    
+</style> -->
+
+
+ <style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+.container{
+    
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    gap: 1px;
+    width: 50vw;
+    height: 80vh;
+    position: relative;
+    left: 25%;
+  
+}
+
+.grid-items{
+   
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+  
+  .box1{
+    background-color: #bacaab;
+
+  }
+
+  .box2{
+    background-color:  #769656;
+   
+
+  }
+
+  .box3{
+    background-color: #bacaab;
+  }
+
+  .box4{
+    background-color:  #769656;
+  }
+
+  .box5{
+    background-color: #bacaab;
+  }
+
+  .box6{
+    background-color:  #769656;
+  }
+
+  .box7{
+    background-color: #bacaab;
+  }
+
+  .box8{
+    background-color:  #769656;
+  }
+
+  .box9{
+    background-color:  #769656;
+  }
+
+  .box10{
+    background-color: #bacaab;
+  }
+
+  .box11{
+    background-color:  #769656;
+  }
+
+
+  .box12{
+    background-color: #bacaab;
+  }
+
+  .box13{
+    background-color:  #769656;
+  }
+
+  .box14{
+    background-color: #bacaab;
+  }
+
+  .box15{
+    background-color:  #769656;
+  }
+
+  .box16{
+    background-color: #bacaab;
+  }
+
+  .box17{
+    background-color: #bacaab;
+  }
+
+  .box18{
+    background-color:  #769656;
+  }
+
+  .box19{
+    background-color: #bacaab;
+  }
+
+  .box20{
+    background-color:  #769656;
+  }
+
+  .box21{
+    background-color: #bacaab;
+  }
+
+  .box22{
+    background-color:  #769656;
+  }
+
+  .box23{
+    background-color: #bacaab;
+  }
+
+  .box24{
+    background-color:  #769656;
+  }
+
+  .box25{
+    background-color:  #769656;
+  }
+
+  .box26{
+    background-color: #bacaab;
+  }
+
+  .box27{
+    background-color:  #769656;
+  }
+
+  .box28{
+    background-color: #bacaab;
+  }
+
+  .box29{
+    background-color:  #769656;
+  }
+
+  .box30{
+    background-color: #bacaab;
+  }
+
+  .box31{
+    background-color:  #769656;
+  }
+
+  .box32{
+    background-color: #bacaab;
+  }
+
+  .box33{
+    background-color: #bacaab;
+  }
+
+  .box34{
+    background-color:  #769656;
+  }
+
+  .box35{
+    background-color: #bacaab;
+  }
+
+  .box36{
+    background-color:  #769656;
+  }
+
+  .box37{
+    background-color: #bacaab;
+  }
+
+  .box38{
+    background-color:  #769656;
+  }
+
+  .box39{
+    background-color: #bacaab;
+  }
+
+  .box40{
+    background-color:  #769656;
+  }
+  
+  .box41{
+    background-color:  #769656;
+  }
+  
+  .box42{
+    background-color: #bacaab;
+  }
+  
+  .box43{
+    background-color:  #769656;
+  }
+  
+  .box44{
+    background-color: #bacaab;
+  }
+  
+  .box45{
+    background-color:  #769656;
+  }
+  
+  .box46{
+    background-color: #bacaab;
+  }
+  
+  .box47{
+    background-color:  #769656;
+  }
+  
+  .box48{
+    background-color: #bacaab;
+  }
+  
+  .box49{
+    background-color:  #769656;
+  }
+  
+  .box50{
+    background-color:  #769656;
+  }
+
+
+  .box49{
+    color: white;
+    background-color: #bacaab;
+    
+  }
+  .box50{
+    color: white;
+    background-color:  #769656;
+    
+  }
+  .box51{
+    color: white;
+    background-color: #bacaab;
+  }
+  .box52{
+    color: white;
+    background-color:  #769656;
+    
+  }
+  .box53{
+    color: white;
+    background-color: #bacaab;
+    
+  }
+  .box54{
+    color: white;
+    background-color: #769656;
+    
+  }
+  .box55{
+    color: white;
+    background-color: #bacaab;
+  }
+  .box56{
+    color: white;
+    background-color: #769656;
+    
+  }
+  .box57{
+    color: white;
+    background-color: #769656;
+    
+  }
+  .box58{
+    color: white;
+    background-color: #bacaab;
+    
+  }
+  .box59{
+    color: white;
+    background-color: #769656;
+    
+  }
+  .box60{
+    color: white;
+    background-color: #bacaab;
+    
+  }
+  .box61{
+    color: white;
+    background-color: #769656;
+    
+  }
+  .box62{
+    color: white;
+    background-color: #bacaab;
+    
+  }
+  .box63{
+    color: white;
+    background-color: #769656;
+    
+  }
+  .box64{
+    color: white;
+    background-color: #bacaab;
+    
+  }
+
+</style> 
+
+
+<!-- <style>
+  .container{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 1px;
+  }
+
+  .grid-items{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+   
+    
+    
+   
+  }
+
+  .box1{
+    grid-column:1/span 3 ;
+    grid-row:1/span 3 ;
+
+
+  }
+
+  .box4{
+    grid-column:4/span 4 ;
+  }
+
+  .box6{
+     grid-row: 4/span 5;
+  } -->
+
+ 
+
+  
+</style> 
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="grid-items box1">1</div>
+        <div class="grid-items box2">2</div>
+        <div class="grid-items box3">3</div>
+        <div class="grid-items box4">4</div>
+        <div class="grid-items box5">5</div>
+        <div class="grid-items box6">6</div>
+        <div class="grid-items box7">7</div>
+        <div class="grid-items box8">8</div>
+        <div class="grid-items box9">9</div>
+    </div> -->
+
+   <div class="container"> 
+            <div class="grid-items box1"><i class="fa fa-chess-rook"></i></div>
+            <div class="grid-items box2"><i class="fa-solid fa-chess-knight"></i></div>
+            <div class="grid-items box3"><i class="fa-solid fa-chess-bishop"></i></div>
+            <div class="grid-items box4"><i class="fa-solid fa-chess-queen"></i></div>
+            <div class="grid-items box5"><i class="fa-solid fa-chess-king"></i></div>
+            <div class="grid-items box6"><i class="fa-solid fa-chess-bishop"></i></div>
+            <div class="grid-items box7"><i class="fa-solid fa-chess-knight"></i></div>
+            <div class="grid-items box8"><i class="fa-solid fa-chess-rook"></i></div>
+            <div class="grid-items box9"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box10"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box11"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box12"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box13"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box14"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box15"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box16"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box17"></div>
+            <div class="grid-items box18"></div>
+            <div class="grid-items box19"></div>
+            <div class="grid-items box20"></div>
+            <div class="grid-items box21"></div>
+            <div class="grid-items box22"></div>
+            <div class="grid-items box23"></div>
+            <div class="grid-items box24"></div>
+            <div class="grid-items box25"></div>
+            <div class="grid-items box26"></div>
+            <div class="grid-items box27"></div>
+            <div class="grid-items box28"></div>
+            <div class="grid-items box29"></div>
+            <div class="grid-items box30"></div>
+            <div class="grid-items box31"></div>
+            <div class="grid-items box32"></div>
+            <div class="grid-items box33"></div>
+            <div class="grid-items box34"></div>
+            <div class="grid-items box35"></div>
+            <div class="grid-items box36"></div>
+            <div class="grid-items box37"></div>
+            <div class="grid-items box38"></div>
+            <div class="grid-items box39"></div>
+            <div class="grid-items box40"></div>
+            <div class="grid-items box41"></div>
+            <div class="grid-items box42"></div>
+            <div class="grid-items box43"></div>
+            <div class="grid-items box44"></div>
+            <div class="grid-items box45"></div>
+            <div class="grid-items box46"></div>
+            <div class="grid-items box47"></div>
+            <div class="grid-items box48"></div>
+            <div class="grid-items box49"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box50"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box51"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box52"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box53"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box54"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box55"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box56"><i class="fa-solid fa-chess-pawn"></i></div>
+            <div class="grid-items box57"><i class="fa fa-chess-rook"></i></div>
+            <div class="grid-items box58"><i class="fa-solid fa-chess-knight"></i></div>
+            <div class="grid-items box59"><i class="fa-solid fa-chess-bishop"></i></div>
+            <div class="grid-items box60"><i class="fa-solid fa-chess-queen"></i></div>
+            <div class="grid-items box61"><i class="fa-solid fa-chess-king"></i></div>
+            <div class="grid-items box62"><i class="fa-solid fa-chess-bishop"></i></div>
+            <div class="grid-items box63"><i class="fa-solid fa-chess-knight"></i></div>
+            <div class="grid-items box64"><i class="fa fa-chess-rook"></i></div>
+
+    </div>
+    
+   
+    <!-- <div class="container">
+        <div class="grid-items box1">1</div>
+        <div class="grid-items box2">2</div>
+        <div class="grid-items box3">3</div>
+        <div class="grid-items box4">4</div>
+        <div class="grid-items box5">5</div>
+        <div class="grid-items box6">6</div>
+        <div class="grid-items box7">7</div>
+
+    </div> -->
+
+
+</body> 
+</html> 
+
