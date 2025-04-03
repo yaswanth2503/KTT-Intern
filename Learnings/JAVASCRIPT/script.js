@@ -150,69 +150,69 @@ For example, when division / is applied to non-numbers:*/
   */
 
   // object
-
-  /*let user = {     
-    name: "John",  
-    age: 30,
-    "like birds":true     
-  };
-
-  console.log(user); 
-   user.isAdmin=true;
-   console.log(user);
-   delete user.isAdmin;
-   console.log(user);
- 
-   let user1 = {
-     name: "John",
-     age: 30,
-    
-   };
-   let key=prompt("Enter key","");
-   alert(user1[key]);
-
-   */
-
-  //  let user={
-  //   name:"Jhon",
-  //   surname:"Smith",
-  //  }
-
-  //  user.name="Pete";
-  //  console.log(user);
-  //  delete user.name;
-  //  console.log(user);
-
-  //  let user2 = {
-  //   name: "John",
-  //   age: 30
-  // };
   
-  // let clone = {}; 
-  // for (let key in user2) {
-  //   clone[key] = user2[key];
-  // }
-  
-  
-  // clone.name = "Pete"; 
-  
-  // alert( user2.name ); 
+  const objName = new Object(); //object constructor
+
+const objName2 = {}; //Object literal
+
+const person = {
+  name: 'ajith', // Changed from 'yash' to 'ajith'
+  age: 22,
+  isAlive: true,
+  hobbies: ["reading", "coding", "chess"],
+  games: {
+    indoor: "chess",
+    outdoor: "cricket"
+  },
+  myName() {
+    return this.name;
+  }
+};
+
+//getting object values
+
+// const result= document.getElementById('result');
+// result.innerHTML=person.myName();
+
+console.log(person.games.indoor);
+
+//object merging
+
+const personMethods = {
+  yearOfBirth() {
+    return new Date().getFullYear() - this.age;
+  }
+};
+
+// object merging
+// Object.assign(person, personMethods);
+//spread operator
+const finalObj={...person,...personMethods}
+console.log(finalObj.yearOfBirth());
 
 
-  // object cloning and nested objects
 
-  // let user3 = {
-  //   name: "John",
-  //   sizes: {
-  //     height: 182,
-  //     width: 50
-  //   }
-  // };
-  
-  // let clones = Object.assign({}, user3);
-  
-  // alert( user3.sizes === clones.sizes );
-  
- 
-  // user3.sizes.width = 60;
-  // alert(clones.sizes.width); 
+
+// object clone 
+const objectCopied = Object.assign({}, person);
+
+// console.log(person.yearOfBirth());
+
+delete person.age;
+person.city="erode";
+person['hi bro']="hi"
+console.log(person);
+
+// optional chaining
+
+console.log(person?.hobbies[0]); // accessing the first hobby if person exists
+console.log(person?.hobbies?.[10]); // accessing the 10th hobby if person exists and hobbies exist
+
+
+
+
+
+
+
+
+
