@@ -312,6 +312,16 @@ let user12 = {
 
   console.log(parseInt('a123')); //NaN
 
+  console.log( parseInt('0xff', 16) ); // 255
+  console.log( parseInt('ff', 16) ); // 255, without 0x also wconsole.log
+  console.log( parseInt('2n9c', 36) ); // 123456
+ 
+  console.log( Math.random() );
+  console.log( Math.max(3, 5, -10, 0, 1) ); // 5
+  console.log( Math.min(1, 2) ); // 1 
+  console.log( Math.pow(2, 10) ); 
+
+
 
   
 
