@@ -17,7 +17,7 @@ let result=iterator.next();
 while(!result.done){
     const element=result.value;
     console.log(element);
-    result=iterator.next();
+    result=iterator.next()
 }
 
 
