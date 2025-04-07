@@ -268,3 +268,21 @@ let [name = "Guest", surrname = "Anonymous"] = ["Julius"];
 
 console.log(name);    // Julius (from array)
 console.log(surrname); // Anonymous (default used)
+
+
+// Object Destructuring
+let options = {
+    title: "Menu",
+    width: 100,
+    height: 200
+  };
+  
+  let {title, width, height} = options;
+  
+  console.log(title);  // Menu
+  console.log(width);  // 100
+  console.log(height); // 200
+
+ // ...rest is same as above
+
+ 
