@@ -183,10 +183,11 @@ set.entries() – returns an iterable object for entries [value, value], exists 
   */
  
   
-// WeakSet
-console.log("-------------------WeakSet-------------------");
+// WeakMap
+console.log("-------------------WeakMap-------------------");
 
 /*
+occupy only objects as keys, not primitives
 WeakMap has only the following methods:
 
 weakMap.set(key, value)
@@ -203,6 +204,25 @@ user=null; // removed from memory even cant accsess it with weakMap
 
 console.log(weakMap.get(user)); // false
 
+
+// WeakSet
+console.log("-------------------WeakSet-------------------");
+//Like Set, it supports add, has and delete, but not size, keys() and no iterations.
+// occupy only objects, not primitives
+
+let weakSet = new WeakSet();
+
+let user1 = { name: "Alice" };
+let user2 = { name: "Bob" };
+let user3 = { name: "Charlie" };
+
+weakSet.add(user1);
+weakSet.add(user2);
+weakSet.add(user3); // user1 and user2 are not garbage collected        
+
+console.log(weakSet.has(user1)); // true
+console.log(weakSet.has(user2)); // true
+console.log(weakSet.has(user3)); // true
 
 
 
