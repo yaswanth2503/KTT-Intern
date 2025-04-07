@@ -125,7 +125,7 @@ let recipeMap = new Map([
   // now prices = { banana: 1, orange: 2, meat: 4 }
   
   console.log(prices.orange); // 2
-  
+
 /*
   Object.entries()
   Converts an object → into an array of [key, value] pairs.
@@ -134,9 +134,53 @@ let recipeMap = new Map([
   Converts an array of [key, value] pairs → into an object
 */
 
+// Set
+
+/*
+new Set([iterable]) – creates the set, and if an iterable object is provided (usually an array), copies values from it into the set.
+set.add(value) – adds a value, returns the set itself.
+set.delete(value) – removes the value, returns true if value existed at the moment of the call, otherwise false.
+set.has(value) – returns true if the value exists in the set, otherwise false.
+set.clear() – removes everything from the set.
+set.size – is the elements count.
+*/
+console.log("-------------------Set-------------------");
 
 
-  
+let set = new Set();
+
+let johnn = { name: "John" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+
+// visits, some users come multiple times
+set.add(johnn);
+set.add(pete);
+set.add(mary);
+set.add(johnn);
+set.add(mary);
+
+
+console.log( set.size ); // 3
+
+for (let user of set) {
+  console.log(user.name); // John Pete and Mary
+}
+
+let sett = new Set(["oranges", "apples", "bananas"]);
+
+for (let value of sett) console.log(value);
+
+// the same with forEach:
+sett.forEach((value, valueAgain, sett) => {
+  console.log(value);
+});
+
+/*
+set.keys() – returns an iterable object for values,
+set.values() – same as set.keys(), for compatibility with Map,
+set.entries() – returns an iterable object for entries [value, value], exists for compatibility with Map.
+  */
  
   
  
