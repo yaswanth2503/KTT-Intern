@@ -271,6 +271,8 @@ console.log(surrname); // Anonymous (default used)
 
 
 // Object Destructuring
+console.log("-------------------Object Destructuring-------------------");
+
 let options = {
     title: "Menu",
     width: 100,
@@ -285,4 +287,23 @@ let options = {
 
  // ...rest is same as above
 
+ //Nested destructuring 
+ console.log("-------------------Nested destructuring-------------------");
+
+ let person = {
+    name5: "John",
+    age: 30,
+    address: {
+      city: "New York",
+      country: "USA"
+    }
+  };
+  
+  let {name5, age, address: {city, country}} = person;
+  
+  console.log(name5); // John
+  console.log(age); // 30
+  console.log(city); // New York
+  console.log(country); // USA
+ 
  
