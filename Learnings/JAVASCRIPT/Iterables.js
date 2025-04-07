@@ -60,6 +60,8 @@ console.log(map.delete("age"));
 
 for(let mp of map){
     console.log(map.get("Intern"));
+   
+
 }
 
 let john = { name: "John" };
@@ -327,8 +329,72 @@ let options = {
   
   showMenu(options3);
 
-  let a=[1,2,3];
-  console.log(a);
-  
+
+ // Date and Time
+
+ let now = new Date();
+ console.log(now);
+
+ /*
+ new Date(year, month, date, hours, minutes, seconds, ms)
+ new Date(2011, 0, 1, 0, 0, 0, 0);1 Jan 2011, 00:00:00
+ new Date(2011, 0, 1); the same, hours etc are 0 by default
+ */
+
+ console.log(now.getFullYear());
+ console.log(now.getMonth());
+ console.log(now.getDate());
+ console.log(now.getHours());
+ console.log(now.getMinutes());
+ console.log(now.getSeconds());
+ console.log(now.getMilliseconds());
+ console.log(now.getDay());
+ console.log(now.getTime());
+ console.log(now.getTimezoneOffset());
+ console.log(+now);
  
+
+ 
+// the hour in UTC+0 time zone (London time without daylight savings)
+console.log(now.getUTCHours());
+
+/*
+Setting date components
+The following methods allow to set date/time components:
+setFullYear(year, [month], [date])
+setMonth(month, [date])
+setDate(date)
+setHours(hour, [min], [sec], [ms])
+setMinutes(min, [sec], [ms])
+setSeconds(sec, [ms])
+setMilliseconds(ms)
+setTime(milliseconds) (sets the whole date by milliseconds since 01.01.1970 UTC)
+*/
+
+let today = new Date();
+
+today.setHours(0);
+console.log(today); // still today, but the hour is changed to 0
+
+today.setHours(0, 0, 0, 0);
+console.log(today); // still today, now 00:00:00 sharp.
+
+let now1=new Date(2013,0,32);
+console.log(now1);
+
+let date = new Date(2016, 1, 28);
+date.setDate(date.getDate() + 2);
+
+console.log( date ); // 1 Mar 2016
+console.log(Date.now());
+
+let ms = Date.parse('2012-01-26T13:51:50.417-07:00');
+
+console.log(ms); // 1327611110417  (timestamp)
+
+let date1 = new Date( Date.parse('2012-01-26T13:51:50.417-07:00') );
+
+console.log(date1);
+
+
  
