@@ -183,4 +183,27 @@ set.entries() – returns an iterable object for entries [value, value], exists 
   */
  
   
- 
+// WeakSet
+console.log("-------------------WeakSet-------------------");
+
+/*
+WeakMap has only the following methods:
+
+weakMap.set(key, value)
+weakMap.get(key)
+weakMap.delete(key)
+weakMap.has(key)
+*/
+
+let weakMap = new WeakMap();
+
+let user = { name: "Alice" };
+weakMap.set(user, "private data");
+user=null; // removed from memory even cant accsess it with weakMap
+
+console.log(weakMap.get(user)); // false
+
+
+
+
+
