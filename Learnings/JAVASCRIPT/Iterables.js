@@ -225,5 +225,46 @@ console.log(weakSet.has(user2)); // true
 console.log(weakSet.has(user3)); // true
 
 
+// Destructuring Assignment
+
+console.log("-------------------Destructuring Assignment-------------------");
+
+const arr1=["Jack","Sparrow"];
+const [firstName,lastName]=arr1;
+console.log(firstName);
+console.log(lastName);
 
 
+
+let [FirstName, surname] = "John Smith".split(' ');
+console.log(FirstName); // John
+console.log(surname);  // Smith
+
+let user4 = {};
+[user4.name, user4.surname] = "John Smith".split(' ');
+
+console.log(user4.name); // John
+console.log(user4.surname); // Smith
+
+let user5 = {
+    name: "John",
+    age: 30
+  };
+
+
+  for (let [key, value] of Object.entries(user5)) {
+    console.log(`${key}:${value}`); // name:John, then age:30
+  }
+
+  let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+// rest is an array of items, starting from the 3rd one
+console.log(rest[0]); // Consul
+console.log(rest[1]); // of the Roman Republic
+console.log(rest.length); // 2
+
+// default values
+let [name = "Guest", surrname = "Anonymous"] = ["Julius"];
+
+console.log(name);    // Julius (from array)
+console.log(surrname); // Anonymous (default used)
