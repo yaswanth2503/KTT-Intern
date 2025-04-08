@@ -44,3 +44,57 @@ function pow(x, n) {
   }
   
   console.log(sumSalaries(company)); // 7700
+
+
+
+  // Rest parameters and spread syntax
+
+  function showName(firstName, lastName, ...titles) {
+    console.log( firstName + ' ' + lastName ); // Julius Caesar
+  
+    // the rest go into titles array
+    // i.e. titles = ["Consul", "Imperator"]
+    console.log( titles[0] ); // Consul
+    console.log( titles[1] ); // Imperator
+    console.log( titles.length ); // 2
+  }
+  
+  showName("Julius", "Caesar", "Consul", "Imperator");
+
+
+  // Spread syntax(...)
+
+  let arr = [3, 5, 1];
+
+ console.log( Math.max(...arr) ); 
+
+ let arr1 = [1, -2, 3, 4];
+ let arr2 = [8, 3, -8, 1];
+
+ console.log( Math.max(1, ...arr1, 2, ...arr2, 25) ); // 25
+
+ let arr3 = [3, 5, 1];
+let arr4 = [8, 9, 15];
+
+let merged = [0, ...arr3, 2, ...arr4];
+
+console.log(merged);
+
+// Copy an array/object
+
+let arr5 = [1, 2, 3];
+
+let arrCopy = [...arr5]; 
+
+
+console.log(JSON.stringify(arr5) === JSON.stringify(arrCopy)); // true
+
+
+console.log(arr5 === arrCopy); // false )
+
+// modifying our initial array does not modify the copy:
+arr.push(4);
+console.log(arr); // 1, 2, 3, 4
+console.log(arrCopy); // 1, 2, 3
+
+// Also we can copy an object:
