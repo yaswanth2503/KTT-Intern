@@ -98,3 +98,30 @@ console.log(arr); // 1, 2, 3, 4
 console.log(arrCopy); // 1, 2, 3
 
 // Also we can copy an object:
+
+
+// Variable scope, closure
+
+{
+    let x=10;
+    console.log(x);;
+    
+}
+// console.log(x); =>error;
+
+// Nested Fucntions
+function makeCounter() {
+    let count = 0;
+  
+    return function() {
+      return count++;
+    };
+  }
+  
+  let counter = makeCounter();
+  
+  console.log( counter() ); // 0
+  console.log( counter() ); // 1
+  console.log( counter() ); // 2
+
+  
