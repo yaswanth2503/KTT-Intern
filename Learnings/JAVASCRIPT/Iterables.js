@@ -396,5 +396,122 @@ let date1 = new Date( Date.parse('2012-01-26T13:51:50.417-07:00') );
 
 console.log(date1);
 
+// JSON(JavaScript Object Notation) methods, toJSON 
+/*
+JSON.stringify to convert objects into JSON.
+JSON.parse to convert JSON back into an object.
 
+These all are ignored by the JSON.stringify method by default.
+Function properties (methods).
+Symbolic keys and values.
+Properties that store undefined.
+
+*/
+
+let student = {
+  name: 'John',
+  age: 30,
+  isAdmin: false,
+  courses: ['html', 'css', 'js'],
+  spouse: null
+};
+
+let json = JSON.stringify(student);
+
+console.log(typeof json); // string
+console.log(json);
+let student1=JSON.parse(json);
+console.log(typeof student1); // object
+console.log(student1);
+
+
+let meetup = {
+  title: "Conference",
+  room: {
+    number: 23,
+    participants: ["john", "ann"]
+  }
+};
+
+console.log( JSON.stringify(meetup) );
+
+/*
+Excluding and transforming: replacer
+Syntax: let json = JSON.stringify(value[, replacer, space])
+*/
+
+let room = {
+  number: 23
+};
+
+let meetup1 = {
+  title: "Conference",
+  participants: [{name: "John"}, {name: "Alice"}],
+  place: room // meetup references room
+};
+
+room.occupiedBy = meetup1; // room references meetup
+
+console.log( JSON.stringify(meetup1, ['title', 'participants', 'place', 'name', 'number']) );
+
+
+
+let room2 = {
+  number: 23
+};
+
+let meetup2 = {
+  title: "Conference",
+  participants: [{name: "John"}, {name: "Alice"}],
+  place: room2 // meetup references room
+};
+
+room2.occupiedBy = meetup2; // room references meetup
+console.log("hi");
+
+console.log( JSON.stringify(meetup2, function replacer(key, value) {
+  console.log(`${key}: ${value}`);
+  return (key == 'occupiedBy') ? undefined : value;
+}));
+
+
+let user6 = {
+  name: "John",
+  age: 25,
+  roles: {
+    isAdmin: false,
+    isEditor: true
+  }
+};
+
+console.log(JSON.stringify(user6, null, 2));
+
+
+let room3 = {
+  number: 23,
+  toJSON() {
+    return this.number;
+  }
+};
+
+let meetup3 = {
+  title: "Conference",
+  room3
+};
+
+console.log( JSON.stringify(room3) ); // 23
+
+console.log( JSON.stringify(meetup3) );
  
+
+// Json Parse
+// Syntax: let obj = JSON.parse(str[,reviver]);
+
+let str4 = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+
+let meetup4 = JSON.parse(str4, function(key, value) {
+  if (key == 'date') return new Date(value);
+  return value;
+});
+
+console.log( meetup4.date.getDate() ); // now works!
