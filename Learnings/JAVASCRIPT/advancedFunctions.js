@@ -243,3 +243,44 @@ console.log( sum(1, 2) ); // 3
 
  // alert("Hello");
 
+
+ // bind method to merge the two functions
+ let user = {
+  firstName: "John"
+};
+
+function func() {
+  console.log(this.firstName);
+}
+
+let funcUser = func.bind(user);
+funcUser(); // John
+
+// Partial functions
+
+// let bound = func.bind(context, [arg1], [arg2], ...);
+
+function mul(a, b) {
+  return a * b;
+}
+
+let double = mul.bind(null, 2);
+
+console.log( double(3) ); // = mul(2, 3) = 6
+console.log( double(4) ); // = mul(2, 4) = 8
+console.log( double(5) ); // = mul(2, 5) = 10
+
+// Arrow funcions revisited 
+
+let group = {
+  title: "Our Group",
+  students: ["John", "Pete", "Alice"],
+
+  showList() {
+    this.students.forEach(
+      student => console.log(this.title + ': ' + student)
+    );
+  }
+};
+
+group.showList();
