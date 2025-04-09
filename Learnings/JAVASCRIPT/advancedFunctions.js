@@ -123,3 +123,18 @@ function makeCounter() {
   console.log( counter() ); // 0
   console.log( counter() ); // 1
   console.log( counter() ); // 2
+
+
+  // Global Object
+
+//   window.alert("Hello from global scope!");
+//   var gVar = 5;
+
+//  alert(window.gVar)
+
+//  let gLet = 5;
+
+// alert(window.gLet); // undefined 
+if (!window.Promise) {
+  alert("Your browser is really old!");
+}
