@@ -209,3 +209,37 @@ welcome(); // Hello, Guest (nested call works)
 let sum = new Function('a', 'b', 'return a + b');
 
 console.log( sum(1, 2) ); // 3
+
+
+// SetTimeout
+// let timerId = setTimeout(func|code, [delay], [arg1], [arg2], ...)
+
+// function sayHi(phrase, who) {
+//   console.log( phrase + ', ' + who );
+// }
+
+// setTimeout(sayHi, 1000, "Hello", "John"); // Hello, John
+
+ // setTimeout(() => alert('Hello'), 1000);
+
+// let timerId=setTimeout(()=>console.log("Hello"),1000);
+// console.log(timerId);
+// clearTimeout(timerId);
+
+ // SetInterval
+// let timerId = setInterval(func|code, [delay], [arg1], [arg2], ...)
+
+// repeat with the interval of 2 seconds
+// let timerId1 = setInterval(() => console.log('tick'), 2000);
+
+// after 5 seconds stop
+// setTimeout(() => { clearInterval(timerId1); console.log('stop'); }, 5000);
+
+// setTimeout(() => {  console.log('hi'); }, 5000);
+
+// Zero delay SetTimeout
+
+// setTimeout(() => alert("World"));
+
+ // alert("Hello");
+
