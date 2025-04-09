@@ -138,3 +138,66 @@ function makeCounter() {
 if (!window.Promise) {
   alert("Your browser is really old!");
 }
+
+
+// Function object, NFE
+
+function sayHi() {
+  alert("Hi");
+}
+
+console.log(sayHi.name); // sayHi
+
+
+function f(sayHi = function() {}) {
+  console.log(sayHi.name); // sayHi (works!)
+}
+
+f();
+
+function f1(a) {}
+function f2(a, b) {}
+function many(a, b, ...more) {}
+
+console.log(f1.length); // 1
+console.log(f2.length); // 2
+console.log(many.length); // 2
+
+
+
+// for example
+
+function add(a,b){
+  
+  return a+b;
+}
+
+add.sub=(a,b)=>a-b;
+
+console.log(add(2,3)); 
+console.log(add.sub(3,2)); 
+// delete add.sub;
+// console.log(add.sub); // undefined
+console.log(add.length); // 2
+console.dir(add); // 
+
+
+// Named function expressions
+let sayHii = function func(who) {
+  console.log(`Hello, ${who}`);
+};
+
+sayHii("John"); // Hello, John
+
+let sayHiii = function func(who) {
+  if (who) {
+    console.log(`Hello, ${who}`);
+  } else {
+    func("Guest"); // Now all fine
+  }
+};
+
+let welcome = sayHiii;
+sayHiii = null;
+
+welcome(); // Hello, Guest (nested call works)
