@@ -201,3 +201,11 @@ let welcome = sayHiii;
 sayHiii = null;
 
 welcome(); // Hello, Guest (nested call works)
+
+
+// new function syntax
+// let func = new Function ([arg1, arg2, ...argN], functionBody);
+
+let sum = new Function('a', 'b', 'return a + b');
+
+console.log( sum(1, 2) ); // 3
