@@ -224,3 +224,40 @@ let key = prompt("What's the key?", "__proto__");
 obj3[key] = "some value"; // primitive has no prototype in js so it ignores the __proto__ property
 
 console.log(obj3[key]); // [object Object], not "some value"!
+
+
+// saw in youtube
+let numbers=[1,2,3,4,5];
+console.log(numbers);
+console.log(Array.prototype);
+const arrObj=Object.getOwnPropertyNames(Array.prototype);
+
+// list all prototypes of array 
+for(const func in arrObj){
+  console.log(arrObj[func]);
+  
+}
+
+console.log("-------------");
+
+
+const Obj=Object.getOwnPropertyNames(Object.prototype);
+for(const func in Obj)
+  console.log(Obj[func]);
+
+
+function Person(name){
+  this.name=name;
+}
+
+Person.prototype.greet=(name)=>{
+  return 'Hi my name is'+ name;
+} 
+
+console.log( Person.prototype);
+
+const nm=new Person("yash");
+console.log(nm);
+
+const myDate=new Date();
+console.log(Object.getPrototypeOf(myDate));
