@@ -9,7 +9,8 @@
 //     ...
 //   }
 
-class Person{
+
+ class Person{
     constructor(name,age){
         this.name=name;
         this.age=age;
@@ -122,3 +123,5 @@ function makeClass(phrase) {
   let button = new Button("hello");
   
   setTimeout(button.click, 1000); // hello
+
+
