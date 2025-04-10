@@ -112,3 +112,35 @@ console.log("-------");
 }
  
     
+// F.prototype
+
+let animal2 = {
+    eats: true
+  };
+  
+  function Rabbit(name) {
+    this.name = name;
+  }
+  
+  Rabbit.prototype = animal2;
+  
+  let rabbit2 = new Rabbit("White Rabbit"); //  rabbit.__proto__ == animal
+  
+  console.log( rabbit2.eats ); // true
+  console.log( rabbit2.name ); // White Rabbit
+
+//   Default F.prototype, constructor property
+
+function Rabbit1() {}
+// by default:
+// Rabbit.prototype = { constructor: Rabbit }
+
+console.log( Rabbit1.prototype.constructor == Rabbit1 ); // true
+
+function Fruit() {}
+// by default:
+// Rabbit.prototype = { constructor: Rabbit }
+
+let fruit = new Fruit(); // inherits from {constructor: Rabbit2}
+
+console.log(fruit.constructor == Fruit); // true (from prototype)
