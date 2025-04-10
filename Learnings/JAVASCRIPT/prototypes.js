@@ -144,3 +144,50 @@ function Fruit() {}
 let fruit = new Fruit(); // inherits from {constructor: Rabbit2}
 
 console.log(fruit.constructor == Fruit); // true (from prototype)
+
+console.log("-----------");
+
+// Native prototypes
+
+// object.prototype
+let obj = {};
+
+console.log(obj.__proto__ === Object.prototype); // true
+console.log(obj.toString === obj.__proto__.toString); //true
+console.log(obj.toString === Object.prototype.toString); //true
+
+console.log(Object.prototype.__proto__); // null
+// Object.prototype is the top of the prototype chain, it doesn't inherit from anything
+
+
+let arr = [1, 2, 3];
+console.dir(arr);
+
+// it inherits from Array.prototype?
+console.log( arr.__proto__ === Array.prototype ); // true
+
+// then from Object.prototype?
+console.log( arr.__proto__.__proto__ === Object.prototype ); // true
+
+// and null on the top.
+console.log( arr.__proto__.__proto__.__proto__ ); // null
+
+
+String.prototype.show = function() {
+    console.log(this);
+  };
+  
+  "BOOM!".show(); // BOOM!
+
+
+  // borrowing from prototypes
+
+  let obj1 = {
+    0: "Hello",
+    1: "world!",
+    length: 2,
+  };
+  
+  obj1.join = Array.prototype.join;
+  
+  console.log( obj1.join(',') ); // Hello,world!
