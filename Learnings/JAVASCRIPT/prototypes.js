@@ -191,3 +191,36 @@ String.prototype.show = function() {
   obj1.join = Array.prototype.join;
   
   console.log( obj1.join(',') ); // Hello,world!
+
+  // Prototype methods, objects without __proto__
+
+/*
+The modern methods to get/set a prototype are:
+
+Object.getPrototypeOf(obj) – returns the [[Prototype]] of obj.
+Object.setPrototypeOf(obj, proto) – sets the [[Prototype]] of obj to proto.
+*/
+
+let animal4 = {
+    eats: true
+  };
+  
+  // create a new object with animal as a prototype
+  let rabbit4 = Object.create(animal4); // same as {__proto__: animal}
+  
+  console.log(rabbit4.eats); // true
+  
+  console.log(Object.getPrototypeOf(rabbit4) === animal4); // true
+  
+  Object.setPrototypeOf(rabbit4, {}); // change the prototype of rabbit to {}
+
+  console.log(rabbit4.eats); // undefined  
+
+
+
+  let obj3 = {};
+
+let key = prompt("What's the key?", "__proto__");
+obj3[key] = "some value"; // primitive has no prototype in js so it ignores the __proto__ property
+
+console.log(obj3[key]); // [object Object], not "some value"!
