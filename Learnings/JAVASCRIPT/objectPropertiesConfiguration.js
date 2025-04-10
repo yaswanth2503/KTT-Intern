@@ -69,6 +69,38 @@ let user4 = {
 // Object.defineProperties(user, {
 //     name: { value: "John", writable: false },
 //     surname: { value: "Smith", writable: false },
-//     // ...
+//     ...
 //   });
 
+
+// Getter and Setter
+let user6 = {
+    name: "John",
+    surname: "Smith",
+  
+    get fullName() {
+      return `${this.name} ${this.surname}`;
+    }
+  };
+  
+  console.log(user6.fullName); // John Smith
+
+
+  let user7 = {
+    name: "John",
+    surname: "Smith",
+  
+    get fullName() {
+      return `${this.name} ${this.surname}`;
+    },
+  
+    set fullName(value) {
+      [this.name, this.surname] = value.split(" ");
+    }
+  };
+  
+  // set fullName is executed with the given value.
+  user7.fullName = "Alice Cooper";
+  
+  console.log(user7.name); // Alice
+  console.log(user7.surname); // Cooper
