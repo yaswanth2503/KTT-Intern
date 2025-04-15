@@ -1,0 +1,4 @@
+Express.js is a web application framework for Node.js.
+
+It simplifies the process of building web servers
+and APIs by handling routing, middleware, request/response logic, and more.
