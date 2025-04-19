@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warranty Tracker</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+<div class="container">
+   <!-- Sidebar -->
+   <nav class="sidebar">
+    <div class="heading">
+        <h2>Warranty Tracker</h2>
+       </div>
+    <ul class="list-grp">
+        <li><span><i class="ri-dashboard-line"></i></span><a href="#dashboard" class="menu-item active"  onclick="showDashboard(event)">Dashboard</a></li>
+        <li><span><i class="ri-file-list-line"></i></span><a href="#warranty-records" class="menu-item" onclick="showWarrantyRecords(event)" >Warranty Records</a></li>
+        <li><span><i class="ri-logout-box-r-line"></i></span><a href="#logout" class="logout">Logout</a></li>
+    </ul>
+   </nav>
+
+   <!-- Dashboard -->
+
+   <div id="dashboard">
+    <div class="welcome">
+        <h2>Welcome Employee</h2>
+    </div>
+    <div class="dashboard-grp">
+        <div class="dashboard-box">
+            Warranty Extendable Products 
+            <div class="count">10</div>
+        </div>
+        <div class="dashboard-box">
+            Warranty Non-Extendable Products 
+            <div class="count">20</div>
+        </div>
+        <div class="dashboard-box">
+            Expire Soon Products 
+            <div class="count">30</div>
+        </div>
+        <div class="dashboard-box">
+            Expired Products 
+            <div class="count">40</div>
+        </div>
+    </div>
+    </div>
+
+   <!-- End of Dashboard -->
+
+
+     <!-- Warranty Records -->
+     <div id="warranty-records"> 
+        <div class="search-bar-grp">
+
+            <div class="add-product">
+                <button onclick="showRegisterationForm(event)" >Add Product</button>
+            </div>
+
+         
+            <div class="search-bar">
+                <input type="search" placeholder="Search Product"> 
+              
+            </div> 
+            <div class="search-icon">
+                <span><i class="ri-search-line"></i></span>
+              </div>
+
+           
+        </div>
+
+     
+
+       <!-- Register Product -->
+        <div id="register-product">
+            <div class="popup-content">
+                <span class="close" onclick="cancelForm(event)"><i class="ri-close-large-line"></i></span>
+            <div class="register-heading">
+                <h2>Product Registeration</h2>
+            </div>
+              <form action="" class="form">
+                <div class="form-grp">
+                    <label for="product-name">Product Name</label><br>
+                    <input type="text" name="product-name" id="product-name" placeholder="Enter Product Name">
+                </div>
+
+                <div class="form-grp">
+                    <label for="employee-id">Employee Id</label><br>
+                    <input type="number" name="employee-id" id="employee-id" placeholder="Enter Employee-id">
+                </div>
+
+                <div class="form-grp">
+                    <label for="extendable">Warranty Extendable</label><br>
+                   <select name="extendable" id="extendable">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                   </select>
+                </div>
+
+                <div class="form-grp">
+                    <label for="serial-no">Serial No</label><br>
+                    <input type="text" id="serial-no" name="serial-no" placeholder="Enter Serial No">
+                </div>
+
+
+                <div class="form-grp">
+                    <label for="category">Category</label><br>
+                    <select name="category" id="category">
+                        <option value="electronics">Electronics</option>
+                        <option value="home-appliances">Home Appliances</option>
+                        <option value="gadgets">Gadgets</option>
+                    </select>
+                </div>
+
+                <div class="form-grp">
+                    <label for="model">Model</label><br>
+                    <select name="model" id="model">
+                     <optgroup label="Electronics">
+                        <option value="samsung">Samsung</option>
+                        <option value="redme">Redme</option>
+                        <option value="realme">Realme</option>
+                     </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-grp">
+                    <label for="purchase-date">Purchase Date</label><br>
+                    <input type="date" name="purchase-date" id="purchase-date">
+                </div>
+
+                <div class="form-grp">
+                    <label for="warranty-date">Warranty Date</label><br>
+                    <input type="date" name="warranty-date" id="warranty-date" >
+                </div>
+
+                <div class="btn-grp">
+                    <button onclick="addAccessoriesWarranty(event)">Add Accessories Warranty</button>
+                    <div class="accessories-grp">
+                        <label for="accessories">Accessory Name</label><br>
+                        <input type="text" name="accessories" id="accessories" placeholder="Enter Accessory Name">
+                    </div>
+
+                    <div class="accessories-grp">
+                        <label for="acc-warranty-date">Warranty Date</label><br>
+                        <input type="date" name="acc-warranty-date" id="acc-warranty-date" >
+                    </div>
+                </div>
+                  <div class="submit-cancel">
+                    <button class="cancelbtn" onclick="cancelForm(event)">Cancel</button>
+                    <button id="submit"> Submit</button>
+                  </div>
+                  
+                  
+              </form>
+
+        </div>
+   </div>
+     <!-- End of Register Product -->
+
+     <!-- Inserting the datas into the table -->
+     
+     <div class="table-data">
+        <table border="1" id="table">
+            <tr>
+                <th>Product Name</th>
+                <th>Employee Id</th>
+                <th>Warranty Extendable</th>
+                <th>Serial No</th>
+                <th>Category</th>
+                <th>Model</th>
+                <th>Purchase Date</th>
+                <th>Warranty Date</th>
+                <th>Accessory Name</th>
+                <th>Accessory Warranty Date</th>
+                <th>
+                    Edit/Delete/Extend Warranty
+                    <!-- <span><button>Edit</button></span>
+                    <span><button>Delete</button></span>
+                    <span><button>Extend Warranty</button></span> -->
+                </th>
+            </tr>
+
+            
+        </table>
+     </div>
+</div>
+
+<!-- End of Warranty Records -->
+</div>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
