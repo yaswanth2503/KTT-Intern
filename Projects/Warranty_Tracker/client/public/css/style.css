@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Sidebar */
+.container{
+  display: flex;
+  
+}
+
+.sidebar{
+    width: 300px;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    flex-shrink: 0;
+    
+
+   
+}
+
+.heading{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.list-grp li{
+    list-style: none;
+    padding: 10px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-item.active-menu::after {
+    width: 60%;
+}
+
+
+.logout{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+    
+
+/* Dashboard */
+
+
+.welcome{
+    padding: 25px;
+    
+}
+
+.dashboard-grp{
+  
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dashboard-box{
+    height: 100px;
+    width: 300px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+
+.count{
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* Warranty Records */
+
+
+ 
+.search-bar-grp{
+    display:flex;
+    margin-top:100px;
+    padding:20px
+}
+
+.search-bar input{
+    
+    padding: 8px;
+    font-size: 16px;
+    border-radius:4px;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+   
+}
+
+.search-bar input:focus{
+    outline: none;
+    outline: none;
+    box-shadow: 0 0 5px 2px yellow;
+    border: 1px solid yellow;
+}
+
+.search-icon span{
+    font-size: 35px;
+    color: black;
+    
+    
+}
+
+/* Add Product  */
+
+.reg-popup{
+  display: none;
+  position: fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+
+}
+
+.popup-content {
+    
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 600px;
+    max-height: 100vh;  
+    overflow-y: auto;  
+    /* position: relative; */
+    margin: 0 auto;
+   
+  }
+
+  .close{
+    float:right;
+    cursor: pointer;
+    color: red;
+  }
+
+.add-product button{
+    padding:10px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.add-product button:hover{
+    background: rgb(51, 50, 50);
+}
+
+.form .form-grp{
+  
+    margin-left:30px;
+    padding: 10px;
+}
+
+.form{
+    font-size: 18px;
+}
+
+.register-heading h2{
+   text-align: center;
+   padding-top: 25px;
+   color: white;
+   font-size: 30px;
+   text-shadow: 2px 2px 2px rgb(220, 138, 31);
+}
+
+.form-grp input{
+    outline: none;
+    padding: 5px;
+    font-size:15px ;
+    margin-top: 8px;
+    width: 80%;
+}
+
+.form-grp select{
+    outline: none;
+    padding: 5px;
+    font-size:15px ;
+    margin-top: 8px;
+    width: 80%;
+}
+
+.btn-grp button{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+
+.btn-grp button:hover{
+    background: rgb(51, 50, 50);
+}
+
+.cancelbtn{
+    background-color: red;
+    color: black;
+}
+
+.accessories-grp{
+    margin-left:30px;
+    padding: 10px;
+
+}
+
+.accessories-grp input{
+    outline: none;
+    padding: 5px;
+    font-size:15px ;
+    margin-top: 8px;
+    width: 80%;
+}
+
+.submit-cancel{
+    display: flex;
+}
+
+.submit-cancel button:nth-child(1){
+    text-align: center;
+    /* padding: 10px; */
+    width: 40%;
+    height: 5vh;
+    margin-left: 50px;
+    background: rgb(245, 55, 55);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.submit-cancel button:nth-child(1):hover{
+    background: rgb(233, 120, 120);
+}
+
+.submit-cancel button:nth-child(2){
+    text-align: center;
+    /* padding: 10px; */
+    width: 40%;
+    height: 5vh;
+    margin-left: 50px;
+    background: rgb(7, 132, 7);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.submit-cancel button:nth-child(2):hover{
+    background: rgb(62, 135, 62);
+}
+
+/* table data */
+
+.table-data table{
+   
+    margin: 50px;
+    border-collapse: collapse;
+    overflow-y: auto;
+}
+
+.table-data table tr{
+    padding: 20px;
+ }
+
+.table-data table td{
+   padding: 20px;
+}
