@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warranty Tracker</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
 </head>
 <body>
     
@@ -16,15 +18,15 @@
         <h2>Warranty Tracker</h2>
        </div>
     <ul class="list-grp">
-        <li><span><i class="ri-dashboard-line"></i></span><a href="#dashboard" class="menu-item active"  onclick="showDashboard(event)">Dashboard</a></li>
-        <li><span><i class="ri-file-list-line"></i></span><a href="#warranty-records" class="menu-item" onclick="showWarrantyRecords(event)" >Warranty Records</a></li>
-        <li><span><i class="ri-logout-box-r-line"></i></span><a href="#logout" class="logout">Logout</a></li>
+        <!-- <li><span><i class="ri-dashboard-line"></i></span><a href="#dashboard" class="menu-item active"  onclick="showDashboard(event)">Dashboard</a></li> -->
+        <li><span><i class="ri-file-list-line"></i></span><a href="#assests" class="menu-item" onclick="showWarrantyRecords(event)" >Assets</a></li>
+        <li><span><i class="ri-logout-box-r-line"></i></span><a href="#logout" class="menu-item">Logout</a></li>
     </ul>
    </nav>
 
    <!-- Dashboard -->
 
-   <div id="dashboard">
+   <!-- <div id="dashboard">
     <div class="welcome">
         <h2>Welcome Employee</h2>
     </div>
@@ -37,7 +39,7 @@
             Warranty Non-Extendable Products 
             <div class="count">20</div>
         </div>
-        <div class="dashboard-box">
+        <div class="dashboard-box"> 
             Expire Soon Products 
             <div class="count">30</div>
         </div>
@@ -46,27 +48,27 @@
             <div class="count">40</div>
         </div>
     </div>
-    </div>
+    </div> -->
 
    <!-- End of Dashboard -->
 
 
      <!-- Warranty Records -->
-     <div id="warranty-records"> 
+     <div id="assests"> 
         <div class="search-bar-grp">
 
             <div class="add-product">
-                <button onclick="showRegisterationForm(event)" >Add Product</button>
+                <button onclick="showRegisterationForm(event)" >Add Asset</button>
             </div>
 
          
-            <div class="search-bar">
+            <!-- <div class="search-bar">
                 <input type="search" placeholder="Search Product"> 
               
             </div> 
             <div class="search-icon">
                 <span><i class="ri-search-line"></i></span>
-              </div>
+              </div> -->
 
            
         </div>
@@ -78,7 +80,7 @@
             <div class="popup-content">
                 <span class="close" onclick="cancelForm(event)"><i class="ri-close-large-line"></i></span>
             <div class="register-heading">
-                <h2>Product Registeration</h2>
+                <h2>Asset Registeration</h2>
             </div>
               <form action="" class="form">
                 <div class="form-grp">
@@ -91,13 +93,7 @@
                     <input type="number" name="employee-id" id="employee-id" placeholder="Enter Employee-id">
                 </div>
 
-                <div class="form-grp">
-                    <label for="extendable">Warranty Extendable</label><br>
-                   <select name="extendable" id="extendable">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                   </select>
-                </div>
+             
 
                 <div class="form-grp">
                     <label for="serial-no">Serial No</label><br>
@@ -115,38 +111,139 @@
                 </div>
 
                 <div class="form-grp">
+                    <label for="brand">Brand</label><br>
+                    <select name="brand" id="brand">
+                        <optgroup label="Electronics">
+                            <option value="samsung">Samsung</option>
+                            <option value="redme">Redme</option>
+                            <option value="realme">Realme</option>
+                         </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-grp">
                     <label for="model">Model</label><br>
                     <select name="model" id="model">
-                     <optgroup label="Electronics">
-                        <option value="samsung">Samsung</option>
-                        <option value="redme">Redme</option>
-                        <option value="realme">Realme</option>
+                    
+                     <optgroup label="Samsung">
+                        <option value="samsung">Samsung S23</option>
+                        <option value="redme">Samsung S24</option>
+                        <option value="realme">Samsung M31 Galaxy</option>
                      </optgroup>
                     </select>
                 </div>
 
                 <div class="form-grp">
-                    <label for="purchase-date">Purchase Date</label><br>
+                    <label for="purchase-date">Purchased Date</label><br>
                     <input type="date" name="purchase-date" id="purchase-date">
+                </div>
+       
+                <div class="form-grp">
+                    <label  for="warranty-start-date">Warranty Start Date</label><br>
+                    <input type="date" name="warranty-start-date" id="warranty-start-date" >
                 </div>
 
                 <div class="form-grp">
-                    <label for="warranty-date">Warranty Date</label><br>
-                    <input type="date" name="warranty-date" id="warranty-date" >
+                    <label  for="warranty-end-date">Warranty End Date</label><br>
+                    <input type="date" name="warranty-end-date" id="warranty-end-date" >
                 </div>
 
-                <div class="btn-grp">
+                <div class="form-grp">
+                    <label for="extendable">Warranty Extendable</label><br>
+                   <select name="extendable" id="extendable">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                   </select>
+                </div>
+
+
+                
+                <!-- Add Accessories -->
+                <!-- <div class="btn-grp">
                     <button onclick="addAccessoriesWarranty(event)">Add Accessories Warranty</button>
-                    <div class="accessories-grp">
-                        <label for="accessories">Accessory Name</label><br>
-                        <input type="text" name="accessories" id="accessories" placeholder="Enter Accessory Name">
-                    </div>
 
-                    <div class="accessories-grp">
-                        <label for="acc-warranty-date">Warranty Date</label><br>
+                    <div id="accessories-container"></div>
+
+                    <div class="accessories-grp" id="accessories-template"style="display: none;">
+                        <label for="accessory-name">Accessory Name</label><br>
+                        <select name="accessory-name" id="accessory-name">
+                            <option value="select">---Select---</option>
+                            <option value="charger">Charger</option>
+                            <option value="headphones">Headphones</option>
+                            <option value="keyboard">Keyboard</option>
+                            <option value="mouse">Mouse</option>
+                            <option value="monitor">Monitor</option>
+                            <option value="mousepad">Mousepad</option>
+                            <option value="others">others</option>
+                            
+                        </select><br>
+                        <div class="others-grp" style="display: none;">
+                             <input type="text">
+                        </div><br>
+                        <div class="acc-extend">
+                            <label for="acc-extendable"> Accessory Warranty Extendable</label><br>
+                           <select name="acc-extendable" id="acc-extendable">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                           </select>
+                        </div>
+                        <br>
+                        <label  for="acc-warranty-date">Warranty Date</label><br>
                         <input type="date" name="acc-warranty-date" id="acc-warranty-date" >
+                        
                     </div>
-                </div>
+                    
+
+                </div>  -->
+             <!-- End of Add Accessories -->
+                    
+
+                      <!-- Add Sub-Part -->
+                    <!-- <div class="btn-grp">
+                        <button onclick="addSubPartWarranty(event)">Add Sub-Part Warranty</button>
+
+                        <div id="subpart-container"></div>
+
+                        <div class="sub-part-grp" style="display: none;" id="subpart-template">
+                            
+
+                            <label for="subpart-name">Sub Part Name</label><br>
+                            <select name="subpart-name" id="subpart-name">
+                                <option value="select">---Select---</option>
+                                <option value="charger">Charger</option>
+                                <option value="headphones">Headphones</option>
+                                <option value="keyboard">Keyboard</option>
+                                <option value="mouse">Mouse</option>
+                                <option value="monitor">Monitor</option>
+                                <option value="mousepad">Mousepad</option>
+                                <option value="others">Others</option>
+                                
+                            </select>
+                            <div class="others-grp" style="display: none;">
+                                 <input type="text">
+                            </div>
+
+                            <div class="subpart-extend">
+                                <br>
+                                <label for="subpart-extendable">Sub Part Warranty Extendable</label><br>
+                               <select name="subpart-extendable" id="subpart-extendable">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                               </select>
+                            </div>
+                            <br>
+    
+    
+                            
+                            <label for="subpart-warranty-date">Warranty Date</label><br>
+                            <input type="date" name="subpart-warranty-date" id="subpart-warranty-date" >
+                            
+                        </div>
+
+                    </div> -->
+                        
+       <!-- End of Sub-Part -->
+
                   <div class="submit-cancel">
                     <button class="cancelbtn" onclick="cancelForm(event)">Cancel</button>
                     <button id="submit"> Submit</button>
@@ -161,36 +258,39 @@
 
      <!-- Inserting the datas into the table -->
      
-     <div class="table-data">
+     <div class="table-wrapper">
         <table border="1" id="table">
-            <tr>
-                <th>Product Name</th>
-                <th>Employee Id</th>
-                <th>Warranty Extendable</th>
-                <th>Serial No</th>
-                <th>Category</th>
-                <th>Model</th>
-                <th>Purchase Date</th>
-                <th>Warranty Date</th>
-                <th>Accessory Name</th>
-                <th>Accessory Warranty Date</th>
-                <th>
-                    Edit/Delete/Extend Warranty
-                    <!-- <span><button>Edit</button></span>
-                    <span><button>Delete</button></span>
-                    <span><button>Extend Warranty</button></span> -->
-                </th>
-            </tr>
-
-            
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Employee Id</th>
+                    <th>Serial No</th>
+                    <th>Category</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Purchased Date</th>
+                    <th>Warranty Start Date</th>
+                    <th>Warranty End Date</th>
+                    <th>Warranty Extendable</th>
+                    <th>Actions</th>    
+                </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
         </table>
-     </div>
+    </div>
 </div>
 
 <!-- End of Warranty Records -->
 </div>
 
 <script src="./js/script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+
 
 </body>
 </html>

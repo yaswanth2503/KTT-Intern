@@ -6,10 +6,14 @@
     scroll-behavior: smooth;
 }
 
+
 /* Sidebar */
 .container{
   display: flex;
   
+
+    width: 100vw;
+    overflow: hidden;
 }
 
 .sidebar{
@@ -164,7 +168,7 @@
     max-width: 600px;
     max-height: 100vh;  
     overflow-y: auto;  
-    /* position: relative; */
+    
     margin: 0 auto;
    
   }
@@ -225,6 +229,38 @@
     width: 80%;
 }
 
+.btn-grp {
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.btn-grp input{
+    outline: none;
+    padding: 5px;
+    font-size:15px ;
+    margin-top: 8px;
+    width: 80%;
+}
+
+.btn-grp select{
+    outline: none;
+    padding: 5px;
+    font-size:15px ;
+    margin-top: 8px;
+    width: 80%;
+}
+
+.accessories-grp ,
+.sub-part-grp  {
+margin-top: 20px;
+}
+
+/* .accessories-grp label,
+.sub-part-grp  label{
+ margin-top: 20px;
+} */
+
+
 .btn-grp button{
     padding: 10px;
     background-color: black;
@@ -232,8 +268,8 @@
     outline: none;
     border: none;
     border-radius: 3px;
-    margin-top: 10px;
-    margin-left: 45px;
+    /* margin-top: 10px; */
+    /* margin-left: 20px; */
     cursor: pointer;
 }
 
@@ -246,19 +282,15 @@
     color: black;
 }
 
-.accessories-grp{
-    margin-left:30px;
-    padding: 10px;
 
-}
 
-.accessories-grp input{
+/* .accessories-grp input{
     outline: none;
     padding: 5px;
     font-size:15px ;
     margin-top: 8px;
     width: 80%;
-}
+} */
 
 .submit-cancel{
     display: flex;
@@ -306,17 +338,59 @@
 
 /* table data */
 
-.table-data table{
-   
-    margin: 50px;
-    border-collapse: collapse;
+
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
     overflow-y: auto;
+    margin: 20px 0;
+    padding-bottom: 15px; 
 }
 
-.table-data table tr{
-    padding: 20px;
- }
 
-.table-data table td{
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap; 
+    min-width: 1500px; 
+}
+
+#table th, #table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#table thead {
+    background-color: rgb(60, 141, 60);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+
+#assests {
+    width: 100%;
+    overflow: hidden; 
+    padding: 0 20px;
+}
+    
+
+
+
+
+
+.dataTables_filter{
+    margin-bottom: 20px;
+   
+}
+
+
+.dataTables_filter input{
    padding: 20px;
+   font-size: 16px;
+   border: none;
+   outline: none;
+   
 }
+
