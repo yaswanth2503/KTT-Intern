@@ -4,7 +4,7 @@
 ## Solving Problems in Leetcode Platform
 Source: https://leetcode.com/problem-list/database/
 
-1. 3421. Find Students Who Improved
+1. 3421.Find Students Who Improved
 * creation of scores table
 ```sql
 create table scores(student_id int, subject varchar(50), score int, exam_date date, primary key(student_id, subject, exam_date));
@@ -30,7 +30,7 @@ order by student_id,subject;
 ```
 <br>
 
-2. 3564. Seasonal Sales Analysis
+2. 3564.Seasonal Sales Analysis
 creation of sales3564 and prodcuts3564 table
 ```sql
 create table sales3564 (sale_id int, product_id int, sale_date date, quantity int, price decimal);
@@ -79,7 +79,7 @@ WHERE rank = 1 ORDER BY 1 asc;
 ```
 <br>
 
-3. 1174. Immediate Food Delivery II
+3. 1174.Immediate Food Delivery II
 * creation of delivery table
 ```sql
 create table delivery(delivery_id int, customer_id int, order_date date, customer_pref_delivery_date date);
@@ -109,7 +109,7 @@ where (customer_id, order_date) in (
 ```
 <br>
 
-4. 3497. Analyze Subscription Conversion 
+4. 3497.Analyze Subscription Conversion 
 * creation of useractivity table
 ```sql
 create table useractivity(user_id int, activity_date date, activity_type varchar, activity_duration int);
