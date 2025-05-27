@@ -36,7 +36,7 @@ create table asset_inventory (
   purchased_date timestamp not null, 
   warranty_start_date timestamp not null,
   warranty_end_date timestamp not null check (warranty_end_date > warranty_start_date),
-  iswarranty_extendable varchar(3) check (iswarranty_extendable in ('yes', 'no')), 
+  iswarranty_extendable varchar(3) not null check (iswarranty_extendable in ('yes', 'no')), 
   asset_price numeric(10,2) not null, 
   asset_images bytea not null, 
   constraint fk_employee_id_employee_credentials foreign key (employee_id) references employee_credentials(employee_id));
@@ -46,7 +46,7 @@ create table asset_inventory (
 ### Warranty_Extensions
 ```sql
 create table warranty_extensions(
-   extension_id serial primary key,
+   extension_id serial primary key not null,
    asset_id varchar(50) not null,
    serial_number varchar(50) not null,
    purchased_date timestamp not null,
