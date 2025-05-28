@@ -1,16 +1,30 @@
 const express = require('express');
+const cors = require('cors');
+const path = require('path'); 
+
 const { sequelize } = require('./models/index'); 
 const assetRoutes = require('./routes/assets'); 
-const employeeRoutes=require('./routes/employee');
+const employeeRoutes=require('./routes/employee');  
 const warrantyExtendRoutes=require('./routes/warrantyExtend');
 const warrantyHistoryRoutes=require('./routes/warrantyHistory');
+const authRoutes = require('./routes/auth');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/api', assetRoutes);
 app.use('/api', employeeRoutes);
 app.use('/api', warrantyExtendRoutes);
 app.use('/api', warrantyHistoryRoutes);
+app.use('/api', authRoutes); 
+
+
+
 
 
 sequelize.sync()
@@ -23,3 +37,4 @@ sequelize.sync()
   .catch((err) => {
     console.error('Error syncing database:', err);
   });
+  

@@ -2,16 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Roboto', 'Segoe UI', 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
 
 
 /* Sidebar */
 .container{
-  display: flex;
-  
-
+    display: flex;
     width: 100vw;
     overflow: hidden;
 }
@@ -19,7 +18,8 @@
 .sidebar{
     width: 300px;
     min-height: 100vh;
-    background-color: black;
+    /* background-color: black; */
+    background-color: #1E1E2F;
     color: white;
     flex-shrink: 0;
     
@@ -55,7 +55,8 @@
     left: 20px;
     width: 0%;
     height: 1px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: #00BCD4;
     transition: width 0.3s ease-in-out;
 }
 
@@ -112,39 +113,77 @@
 /* Warranty Records */
 
 
- 
-.search-bar-grp{
-    display:flex;
-    margin-top:100px;
-    padding:20px
+/* Filter  */
+
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around;
+    margin-top: 100px;
+    */
 }
 
-.search-bar input{
+.filter-grp{
+    margin-top: 100px;
+    margin-right: 50px;
     
-    padding: 8px;
-    font-size: 16px;
-    border-radius:4px;
-    outline: none;
+    
+}
+
+.filter-grp button{
+    
+    padding:10px;
+    /* background-color: black; */
+    background-color: #00BCD4;
+    cursor: pointer;
+    color: white;
     border: none;
-    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    font-size: 16px;
+    /* margin-left: 100px; */
+    width: 6vw;
    
 }
 
-.search-bar input:focus{
-    outline: none;
-    outline: none;
-    box-shadow: 0 0 5px 2px yellow;
-    border: 1px solid yellow;
+.filter-grp button:hover{
+    background-color: #0097A7;
 }
 
-.search-icon span{
-    font-size: 35px;
-    color: black;
-    
-    
-}
+ .filter-grp select{
+    outline: none;
+    font-size: 16px;
+    color: #333333;
+    /* background-color: #039BE5; */
+    border:#D1D9E6;
+    background-color: #F0F4F8;
+    border-radius: 3px;
+     padding: 10px;
+ }
 
-/* Add Product  */
+
+
+ /* Add Asset Button  */
+
+ .add-asset button{
+    margin-top: 50px;
+    padding:10px;
+    /* background-color: black; */
+    background-color: #4CAF50;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    font-size: 16px;
+   
+ }
+
+ .add-asset button:hover{
+    background-color: #388E3C;
+ }
+
+/* popup form  */
 
 .reg-popup{
   display: none;
@@ -188,7 +227,7 @@
     border-radius: 3px;
     outline: none;
     font-size: 16px;
-    margin-right: 10px;
+   
 }
 
 .add-product button:hover{
@@ -229,53 +268,7 @@
     width: 80%;
 }
 
-.btn-grp {
-    padding: 15px;
-    margin-left: 20px;
-}
 
-.btn-grp input{
-    outline: none;
-    padding: 5px;
-    font-size:15px ;
-    margin-top: 8px;
-    width: 80%;
-}
-
-.btn-grp select{
-    outline: none;
-    padding: 5px;
-    font-size:15px ;
-    margin-top: 8px;
-    width: 80%;
-}
-
-.accessories-grp ,
-.sub-part-grp  {
-margin-top: 20px;
-}
-
-/* .accessories-grp label,
-.sub-part-grp  label{
- margin-top: 20px;
-} */
-
-
-.btn-grp button{
-    padding: 10px;
-    background-color: black;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    /* margin-top: 10px; */
-    /* margin-left: 20px; */
-    cursor: pointer;
-}
-
-.btn-grp button:hover{
-    background: rgb(51, 50, 50);
-}
 
 .cancelbtn{
     background-color: red;
@@ -284,13 +277,7 @@ margin-top: 20px;
 
 
 
-/* .accessories-grp input{
-    outline: none;
-    padding: 5px;
-    font-size:15px ;
-    margin-top: 8px;
-    width: 80%;
-} */
+
 
 .submit-cancel{
     display: flex;
@@ -346,6 +333,7 @@ margin-top: 20px;
     overflow-y: auto;
     margin: 20px 0;
     padding-bottom: 15px; 
+    
 }
 
 
@@ -361,9 +349,11 @@ margin-top: 20px;
     border: 1px solid #ddd;
 }
 
-#table thead {
-    background-color: rgb(60, 141, 60);
+#table thead tr th {
+    /* background-color: rgb(60, 141, 60); */
+    background-color:#4CAF50;
     color: white;
+    text-align: center;
     position: sticky;
     top: 0;
 }
@@ -375,10 +365,6 @@ margin-top: 20px;
     padding: 0 20px;
 }
     
-
-
-
-
 
 .dataTables_filter{
     margin-bottom: 20px;
@@ -394,3 +380,164 @@ margin-top: 20px;
    
 }
 
+.edit-row{
+  
+    color: white;
+    background-color: #007bff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.edit-row:hover{
+    background-color:#0097A7;
+}
+
+.delete-row{
+    color: white;
+    background-color: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.delete-row:hover{
+    background-color:rgb(233, 120, 120);
+}
+
+.extend-warranty,.warranty-history{
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.extend-warranty:hover,.warranty-history:hover
+{
+    background-color: #388E3C;
+} 
+
+
+
+/* Extend Warranty Popup  */
+
+.extendWarranty-popup{
+    display: none;
+    position: fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.extendWarranty-popup .popup-content  .form-grp{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.extendHeading h2{
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px rgb(220, 138, 31);
+}
+
+
+.warranty-history-popup{
+    display: none;
+    position: fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.history-heading h3{
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px rgb(220, 138, 31);
+
+}
+
+
+.warranty-history-popup table{
+    margin-top: 50px;
+}
+
+.warranty-history-popup table thead tr th{
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Image popup  */
+
+
+.view-images-btn{
+    color: white;
+    background-color: grey;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.view-images-btn:hover{
+    background-color: rgb(184, 177, 177);
+}
+
+.popup-content-image{
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 600px;
+    max-height: 100vh;  
+    overflow-y: auto;  
+    
+    margin: 0 auto;
+}
+
+.imageViewer-popup{
+    display: none;
+    position: fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.image-heading h3{
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px rgb(220, 138, 31);
+}

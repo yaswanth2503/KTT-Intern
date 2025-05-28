@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Asset = require('../models/Asset');
+// const cors = require('cors');
 
 // Get all assets
 router.get('/assets', async (req, res) => {
@@ -14,7 +15,7 @@ router.get('/assets', async (req, res) => {
 });
 
 // Create a new asset
-router.post('/assets', async (req, res) => {
+router.post('/assets',async (req, res) => {
   const {
     Asset_Id, Employee_Id, Serial_Number, Category, Brand, Model, Purchased_From, 
     Purchased_Date, Warranty_Start_Date, Warranty_End_Date, Warranty_Extendable, 
@@ -43,5 +44,8 @@ router.post('/assets', async (req, res) => {
     res.status(500).json({ message: 'Error creating asset' });
   }
 });
+
+
+
 
 module.exports = router;
