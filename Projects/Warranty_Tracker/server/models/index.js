@@ -1,18 +1,18 @@
 const sequelize = require('../config/database');
-const Employee = require('./Employee');
-const Asset = require('./Asset');
-const ExtendWarranty = require('./WarrantyExtend');
-const WarrantyHistory = require('./WarrantyHistory');
+const Employee = require('./EmployeeCredentials');
+const Asset = require('./AssetInventory');
+const WarrantyExtension = require('./WarrantyExtensions');
+const WarrantyHistory = require('./WarrantyHistoryLogs');
 
 // Associations
 Asset.belongsTo(Employee, { foreignKey: 'Employee_Id' });
-ExtendWarranty.belongsTo(Asset, { foreignKey: 'Asset_Id' });
-WarrantyHistory.belongsTo(Asset, { foreignKey: 'Asset_Id' });
+WarrantyExtension.belongsTo(Asset, { foreignKey: 'Asset_Id' });
+WarrantyHistory.belongsTo(WarrantyExtension, { foreignKey: 'Extension_Id' });
 
 module.exports = {
   sequelize,
   Employee,
   Asset,
-  ExtendWarranty,
+  WarrantyExtension,
   WarrantyHistory
 };

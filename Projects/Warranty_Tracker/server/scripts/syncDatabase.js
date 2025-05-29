@@ -1,12 +1,12 @@
 const sequelize = require('../config/database');
-const Employee = require('../models/Employee');
-const Asset = require('../models/Asset');
-const ExtendWarranty = require('../models/WarrantyExtend');
-const WarrantyHistory = require('../models/WarrantyHistory');
+const Employee = require('../models/EmployeeCredentials');
+const Asset = require('../models/AssetInventory');
+const ExtendWarranty = require('../models/WarrantyExtensions');
+const WarrantyHistory = require('../models/WarrantyHistoryLogs');
 
 (async () => {
   try {
-    await sequelize.sync({ force: false });  
+    await sequelize.sync({ force: true });  
     console.log('Database synced successfully!');
     process.exit();
   } catch (error) {

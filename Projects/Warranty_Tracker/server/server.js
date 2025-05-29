@@ -3,10 +3,10 @@ const cors = require('cors');
 const path = require('path'); 
 
 const { sequelize } = require('./models/index'); 
-const assetRoutes = require('./routes/assets'); 
-const employeeRoutes=require('./routes/employee');  
-const warrantyExtendRoutes=require('./routes/warrantyExtend');
-const warrantyHistoryRoutes=require('./routes/warrantyHistory');
+const assetRoutes = require('./routes/assetInventory'); 
+const employeeRoutes=require('./routes/employeeCredentials');  
+const warrantyExtensionRoutes=require('./routes/warrantyExtensions');
+const warrantyHistoryRoutes=require('./routes/warrantyHistoryLogs');
 const authRoutes = require('./routes/auth');
 
 const app = express();
@@ -19,11 +19,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', assetRoutes);
 app.use('/api', employeeRoutes);
-app.use('/api', warrantyExtendRoutes);
+app.use('/api', warrantyExtensionRoutes);
 app.use('/api', warrantyHistoryRoutes);
 app.use('/api', authRoutes); 
-
-
 
 
 

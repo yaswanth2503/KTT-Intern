@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Employee = require('../models/Employee');
+const Employee = require('../models/EmployeeCredentials');
 
 // Get all employees
 // Here employees-table name,Employee model name
@@ -41,7 +41,7 @@ router.post('/employees', async (req, res) => {
     });
   } catch (error) {
     console.error('Error creating employee:', error);
-    res.status(500).json({ message: 'Error creating employee' });
+    res.status(500).json({ message: 'Error creating employee',error:error.message });
   }
 });
 
