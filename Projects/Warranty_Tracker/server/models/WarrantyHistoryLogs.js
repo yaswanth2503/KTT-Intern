@@ -40,10 +40,6 @@ const WarrantyHistory = sequelize.define('WarrantyHistoryLogs', {
 });
 
 
-WarrantyHistory.belongsTo(Warranty_Extension, { 
-  foreignKey: 'Extension_Id',
-    onDelete: 'CASCADE',
-    onUpdate: 'CASCADE'
- });
+WarrantyHistory.belongsTo(Warranty_Extension, {foreignKey: 'Extension_Id', onUpdate: 'CASCADE' });
 
 module.exports = WarrantyHistory;

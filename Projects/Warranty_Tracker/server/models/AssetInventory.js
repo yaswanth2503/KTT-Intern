@@ -60,6 +60,7 @@ const Asset = sequelize.define('AssetInventory', {
 {
   tableName: 'Asset_Inventory',
   timestamps: true,
+  paranoid:true,
   indexes:[
     {
       fields:['Employee_Id']
@@ -86,7 +87,6 @@ const Asset = sequelize.define('AssetInventory', {
 
 Asset.belongsTo(Employee, { 
   foreignKey: 'Employee_Id',
-  onDelete:'RESTRICT',
   onUpdate:'CASCADE'
 });
 

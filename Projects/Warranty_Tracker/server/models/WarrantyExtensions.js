@@ -54,7 +54,6 @@ const WarrantyExtension = sequelize.define('Warranty_Extensions', {
 
 WarrantyExtension.belongsTo(Asset, { 
   foreignKey: 'Asset_Id',
-  onDelete: 'CASCADE',
   onUpdate: 'CASCADE'
  });
 

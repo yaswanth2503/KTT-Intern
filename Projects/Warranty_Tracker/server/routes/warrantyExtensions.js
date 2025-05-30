@@ -15,7 +15,7 @@ router.get('/warranty_extensions', async (req, res) => {
 });
 
 
-router.post('/warranty_extensions', async (req, res) => {
+router.post('/register', async (req, res) => {
   const {
    Extension_id,Asset_Id,Serial_Number, Purchased_Date, Warranty_Start_Date, Warranty_End_Date, 
    Warranty_Extend_Price, Extend_Warranty_in_Months
