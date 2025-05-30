@@ -74,6 +74,11 @@ const Asset = sequelize.define('AssetInventory', {
       throw new Error('Warranty End Date must be after the Warranty Start Date.')
     }
     
+  },
+  checkPrice(){
+    if(this.Asset_Price<=0){
+      throw new Error('Asset Price must be greater than 0.')
+    }
   }
 }
 });
