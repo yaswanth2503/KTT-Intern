@@ -5,7 +5,7 @@ const sequelize = require('../config/database');
 const Employee = sequelize.define('EmployeeCredentials', {
  
   Employee_Id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.SMALLINT,
     allowNull: false,
     primaryKey: true,
   },

@@ -4,12 +4,12 @@ const Employee = require('./EmployeeCredentials');
 
 const Asset = sequelize.define('AssetInventory', {
   Asset_Id: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.STRING,
     primaryKey: true,
     allowNull: false,
   },
   Employee_Id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.SMALLINT,
     allowNull: false,
   },
   Serial_Number: {
@@ -17,23 +17,23 @@ const Asset = sequelize.define('AssetInventory', {
     allowNull: true,
   },
   Category: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.TEXT('medium'),
     allowNull: false,
   },
   Brand: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.TEXT('long'),
     allowNull: false,
   },
   Model: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.TEXT('medium'),
     allowNull: false,
   },
   Purchased_From: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.TEXT('tiny'),
     allowNull: false,
   },
   Purchased_Date: {
-    type: DataTypes.DATEONLY,
+    type: DataTypes.DATE,
     allowNull: false,
   },
   Warranty_Start_Date: {
@@ -45,7 +45,7 @@ const Asset = sequelize.define('AssetInventory', {
     allowNull: false,
   },
   Warranty_Extendable: {
-    type: DataTypes.STRING(3),
+    type: DataTypes.BOOLEAN,
     allowNull: false,
   },
   Asset_Price: {
@@ -62,8 +62,9 @@ const Asset = sequelize.define('AssetInventory', {
   timestamps: true,
   paranoid:true,
   indexes:[
-    {
-      fields:['Employee_Id']
+    { 
+      unique: true,
+      fields:['Asset_Id']
     }
   ],
   validate:{

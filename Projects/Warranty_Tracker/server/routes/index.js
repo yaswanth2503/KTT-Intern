@@ -15,7 +15,7 @@ const{getAllHistory}=require('../controllers/warrantyHistoryController');
 
 // Employee Credentials Routes
 
-// Create a new employee
+// Create a new employee    
 router.post('/user',register);
 
 // Get all employees
