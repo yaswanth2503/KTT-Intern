@@ -17,16 +17,6 @@ const Employee = sequelize.define('EmployeeCredentials', {
   tableName: 'Employee_Credentials',
   timestamps:true,
   paranoid:true,
-  hooks:{
-    beforeCreate: async(employee)=>{
-      employee.Password = await bcrypt.hash(employee.Password,10)
-    },
-    beforeUpdate: async(employee)=>{
-      if(employee.changed('Password')){
-      employee.Password = await bcrypt.hash(employee.Password,10)
-      }
-    }
-  }
  
 });
 
