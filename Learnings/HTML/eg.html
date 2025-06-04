@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>table practise</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th,td{
+            text-align: center;
+            /* padding: 12px; */
+        }
+        th{
+            background-color: rgb(249, 132, 132);
+        }
+    </style>
+</head>
+<body>
+
+   <table border="1" cellpadding="10">
+    <tr >
+        <th  rowspan="2">Heading</th>
+        <th>Students</th>
+        <th colspan="3">Details</th>
+       
+    </tr>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Roll Number</th>
+    </tr>
+    <tr>
+        <td rowspan="4">Student List</td>
+        <td>1</td>
+        <td>Victor</td>
+        <td>Computer Science</td>
+        <td>123456789</td>
+
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>John</td>
+        <td>Mathematics</td>
+        <td>987654321</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Tom</td>
+        <td>Mathematics</td>
+        <td>876543210</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Peter</td>
+        <td>Mathematics</td>
+        <td>765432198</td>
+    </tr>
+   </table>
+<br>
+   <table border="1" cellpadding="10">
+    
+    <colgroup>
+        <col span="2">
+        <col style="background-color: blue;" span="2">
+        <col span="2">
+    </colgroup>
+    <tr>
+        <th colspan="6">New Employee Records</th>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Jobs</th>
+
+        <th>Working Experience</th>
+        <th>hi</th>
+        <th>bye</th>
+
+    </tr>
+    <tr>
+        <td>Jhon</td>
+        <td>Software Developer</td>
+        <td>Data Analyst</td>
+        <td rowspan="2">5 Years</td>
+        <td>hi</td>
+        <td>bye</td>
+
+    </tr>
+    <tr>
+        <td>Jhon</td>
+        <td colspan="2">Senior Web Developer</td>
+        <td>hi</td>
+        <td>bye</td>
+       
+
+    </tr>
+
+    <tr>
+        <td>Jack</td>
+        <td>Junior Web Developer</td>
+        <td>Blogger</td>
+        <td>6 months</td>
+        <td>hi</td>
+        <td>bye</td>
+    </tr>
+    
+    <tr>
+        <td>Jack</td>
+        <td>Junior Web Developer</td>
+        <td>Blogger</td>
+        <td>6 months</td>
+        <td>hi</td>
+        <td>bye</td>
+    </tr>
+
+
+
+
+   </table>
+   <input type="radio" name="gender" value="male" checked> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="checkbox" name="subscribe" checked> Subscribe to newsletter
+<input type="password" name="" id="" 
+pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+<input type="text" name="" id="" value="hi" readonly>
+ <input type="text" name="" id="" value="bye" disabled>
+
+
+<table border="1" cellpadding="10">
+<tr>
+    <th rowspan="3">Day</th>
+    <th colspan="5">Seminar</th>
+</tr>
+
+<tr>
+    <th colspan="2">Schedule</th>
+    <th rowspan="2" colspan="2">Topic</th>
+</tr>
+
+<tr>
+    <th>Begin</th>
+    <th>End</th>
+</tr>
+
+<tr>
+    <td rowspan="2">Monday</td>
+    <td rowspan="2">8:00 AM</td>
+    <td rowspan="2">5:00 PM</td>
+    <td>Introduction to XML</td>
+  
+
+</tr>
+<tr>
+    <td>Validity:DTD and Relax NG</td>
+</tr>
+
+<tr>
+    <td rowspan="3">Tuesday</td>
+    <td>8:00 AM</td>
+    <td>11:00 PM</td>
+    <td rowspan="1.5">XPath</td>
+    
+</tr>
+
+<tr>
+    <td>11:00 AM</td>
+    <td>2:00 PM</td>
+    <td rowspan="1.5">XSL Transformations</td>
+
+</tr>
+
+<tr>
+    <td>2:00 PM</td>
+    <td>5:00 PM</td>
+
+
+</tr>
+
+<tr>
+    <td>Wednesday</td>
+    <td>8:00 AM</td>
+    <td>12:00 PM</td>
+    <td>XSL Formatting Objects</td>
+</tr>
+</table>
+
+<table border="1" cellpadding="10">
+    <colgroup>
+    <col span="1">
+    <col span="2" style="background-color: yellow;">
+    <col span="2">
+</colgroup>
+    <tr>
+        <th rowspan="3">Day</th>
+        <th colspan="5">Seminar</th>
+    </tr>
+    
+    <tr>
+        <th colspan="2">Schedule</th>
+        <th rowspan="2" colspan="2">Topic</th>
+    </tr>
+    
+    <tr>
+        <th>Begin</th>
+        <th>End</th>
+    </tr>
+    
+    <tr>
+        <td rowspan="2">Monday</td>
+        <td rowspan="2">8:00 AM</td>
+        <td rowspan="2">5:00 PM</td>
+        <td>Introduction to XML</td>
+    </tr>
+    <tr>
+        <td>Validity: DTD and Relax NG</td>
+    </tr>
+    
+    <tr>
+        <td rowspan="3">Tuesday</td>
+        <td>8:00 AM</td>
+        <td>11:00 AM</td>
+        <td rowspan="1.5">XPath</td>
+    </tr>
+    
+    <tr>
+        <td>11:00 AM</td>
+        <td>2:00 PM</td>
+        <td rowspan="1.5">XSL Transformations</td>
+    </tr>
+    
+    <tr>
+        <td>2:00 PM</td>
+        <td>5:00 PM</td>
+    </tr>
+    
+    <tr>
+        <td>Wednesday</td>
+        <td>8:00 AM</td>
+        <td>12:00 PM</td>
+        <td>XSL Formatting Objects</td>
+    </tr>
+    </table>
+
+
+
+
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th rowspan="2">Day</th>
+        <th colspan="2">Schedule</th>
+        <th rowspan="2">Topic</th>
+    </tr>
+    <tr>
+        <th>Begin</th>
+        <th>End</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Monday</td>
+        <td rowspan="2">8:00 a.m.</td>
+        <td rowspan="2">5:00 p.m.</td>
+        <td>Introduction to XML</td>
+    </tr>
+    <tr>
+        <td>Validity: DTD and Relax NG</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Tuesday</td>
+        <td>8:00 a.m.</td>
+        <td>11:00 a.m.</td>
+        <td>XPath</td>
+    </tr>
+    <tr>
+        <td>11:00 a.m.</td>
+        <td>2:00 p.m.</td>
+        <td rowspan="2">XSL Transformations</td>
+    </tr>
+    <tr>
+        <td>2:00 p.m.</td>
+        <td>5:00 p.m.</td>
+    </tr>
+    <tr>
+        <td>Wednesday</td>
+        <td>8:00 a.m.</td>
+        <td>12:00 p.m.</td>
+        <td>XSL Formatting Objects</td>
+    </tr>
+</table>
+
+<select name="" id="">
+    <optgroup label="Frontend">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JAVASCRIPT</option>
+    </optgroup>
+    <optgroup label="Backend">
+        <option value="php">PHP</option>
+        <option value="java">JAVA</option>
+        <option value="c">C</option>
+
+    </optgroup>
+ 
+<input list="data" type="text">
+    <datalist name="data" id="data">
+    <optgroup label="Frontend">
+        <option value="HTML"></option>
+        <option value="CSS"></option>
+        <option value="JAVASCRIPT"></option>
+    </optgroup>
+    <optgroup label="Backend">
+        <option value="PHP"></option>
+        <option value="Java"></option>
+        <option value="C"></option>    
+
+    </optgroup>
+    </datalist>
+</select>
+
+
+
+</body>
+</html>

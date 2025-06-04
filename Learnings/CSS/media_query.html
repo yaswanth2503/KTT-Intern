@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <!-- Small(smaller than 640px)
+    Medium(between 641px and 1024px)
+    Large(larger than 1024px) -->
+
+<style>
+    /* h1{
+        color: red;
+    }
+
+    @media screen and (max-width:600px){
+        h1{
+            color: blue;
+        }
+    } */
+
+    /* div{
+        background-color: red;
+        height: 100px;
+    } */
+/* 
+    @media screen and (max-width:900px){
+        div{
+            background-color: blue;
+        }
+      
+    }
+
+
+    @media screen and (max-width:600px){
+        div{
+            background-color: red;
+        }
+      
+    }
+
+   */
+
+   /* @media screen and (min-width:600px){
+        div{
+            background-color: blue;
+        }
+      
+    }
+
+   @media screen and (min-width:900px){
+        div{
+            background-color: yellow;
+        }
+      
+    } */
+
+    /* .one{
+        background-color: black;
+        margin:5px ;
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+
+    @media screen and (max-width:600px){
+        .one{
+           
+            float: none;
+            
+
+        }
+    } */
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+   .one{
+    background-color: aquamarine;
+    height: 100px;
+    margin: 5px;
+    flex-basis:20%;
+   }
+
+
+   @media screen and (max-width:800px){
+       .one{
+        flex-basis: 40%;
+       }
+   }
+
+   @media screen and (max-width:600px){
+       .one{
+        flex-basis: 100%;
+       }
+   }
+
+   
+
+   
+</style>
+
+</head>
+<body>
+    <!-- <h1>Hello World</h1> -->
+
+    <!-- <div></div> -->
+     <!-- <div class="one">
+
+     </div>
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aliquid sint adipisci consequatur. Voluptatem, provident laudantium molestias consectetur dolorem amet? Eos, laboriosam fuga recusandae aut saepe magnam. Repellendus, cumque asperiores!</p> -->
+
+
+    <div class="container">
+        <div class="one"></div>
+        <div class="one"></div>
+        <div class="one"></div>
+        <div class="one"></div>
+    </div>
+    
+</body>
+</html>

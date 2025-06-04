@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+   
+    <style>
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+     /* .container{
+       border: 5px solid black;
+       margin: 10px;
+      }
+
+      .grid-item{
+        color: white;
+        font-size: 18px;
+        padding: 16px;
+        text-align: center;
+      }
+
+      .box1 { background-color: #df7777; }  /* Dark Gray */
+     /* .box2 { background-color: #ffcc00; }  /* Bright Yellow */
+     /* .box3 { background-color: #2c2f33;  }  /* Discord Gray */
+     /* .box4 { background-color: #ff5733;  }  /* Bright Orange */
+      /*.box5 { background-color: #121212;  }  /* True Black */
+      /*.box6 { background-color: #4caf50; }  /* Green */
+      /*.box7 { background-color: #181818;  }  /* YouTube Dark */
+      /*.box8 { background-color: #3498db;  }  /* Sky Blue */
+      /*.box9 { background-color: #e91e63; }  /* Pink */
+
+
+     /* .container{
+    /*     display: grid;
+         /* height: 800px; */
+         /* grid-template-columns:repeat(3,1fr);
+         grid-template-rows:repeat(3,1fr) ; */
+       /*  grid-template: repeat(3,200px)/ repeat(3,200px);
+         /* column-gap: 20px;
+         row-gap: 20px; */
+         /* gap: 20px; */
+         /* justify-items: center;
+         align-items:center; */
+         /* place-items: center; */
+         /* justify-content: space-evenly; */
+         /* align-content: space-evenly; */
+         /* place-content: center; 
+
+      } */
+
+      /* .box1 { 
+        
+        grid-column: 1/ span 2;
+        grid-row:1/span 2;
+
+        } */
+
+        /* .box2{
+          /* justify-self: center;
+          align-self:center ; 
+          place-self: center;
+        } */
+
+        header,nav,main,aside,footer{
+            background-color: orangered;
+            color: white;
+            padding: 20px;
+            border: 1px solid white;
+        }
+
+        body{
+          width: 100vw;
+          height: 100vh;
+          display: grid;
+          grid-template-areas: 
+          'header header header'
+          'nav content sidebar'
+          'footer footer footer';
+          grid-template-columns:1fr 4fr 1fr ;
+          grid-template-rows: 100px 1fr 100px;
+        }
+
+        header{
+          grid-area: header;
+        }
+
+        nav{
+          grid-area: nav;
+        }
+
+        main{
+          grid-area: content;
+        }
+
+        aside{
+          grid-area: sidebar;
+        }
+
+        footer{
+          grid-area: footer;
+        }
+
+    </style>
+    
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="grid-item box1">box1</div>
+      <div class="grid-item box2">box2</div>
+      <div class="grid-item box3">box3</div>
+      <div class="grid-item box4">box4</div>
+      <div class="grid-item box5">box5</div>
+      <div class="grid-item box6">box6</div>
+      <div class="grid-item box7">box7</div>
+      <div class="grid-item box8">box8</div>
+      <div class="grid-item box9">box9</div>
+       
+    </div> -->
+
+ <header>Header</header>
+ <main>Content</main>
+ <nav>Navigation</nav>
+ <aside>Sidebar</aside>
+ <footer>Footer</footer>
+
+  </body>   
+</html>

@@ -1,0 +1,299 @@
+
+    <!-- <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          document.getElementById("location").innerHTML =
+            "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+
+        let url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            let locationElement = document.getElementById("location");
+            if (locationElement) {
+              locationElement.innerHTML = "Your Location: " + data.display_name;
+            } else {
+              console.error("Element with ID 'location' not found in the DOM.");
+            }
+          })
+          .catch((error) => console.log("Error fetching location: ", error));
+      }
+
+      function showError(error) {
+        let locationElement = document.getElementById("location");
+        if (locationElement) {
+          locationElement.innerHTML = "Error getting location.";
+        }
+      }
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script> -->
+
+       <!-- <center>
+    <h1>DAY1</h1>
+    
+    <h1>Student Report Card</h1>
+    <br>
+
+    <table border="1" cellpadding="0">
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Ajith</td>
+            <td>Maths</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            
+            <td>Science</td>
+            <td>85</td>     
+        </tr>
+        <tr>
+          
+            <td>Social Science</td>
+            <td>85</td>     
+        </tr>
+    </table>
+    <br>
+    
+    
+        <details>
+        <summary>
+            Teacher Remarks
+   
+    </summary>
+    <p> You have done well in all the subjects. Keep it up.</p>
+</details>
+    
+    <p>Parents Signature</p>
+    <input type="text"><br><br>
+    <input type="submit"><br><br>
+
+    <form action="/action_page.php">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+        <input type="submit">
+      </form><br>
+      <blockquote>
+        "Success&nbsp;is&nbsp;not&nbsp;final,&nbsp;failure&nbsp;is&nbsp;not&nbsp;fatal:&nbsp;it&nbsp;is&nbsp;the&nbsp;courage&nbsp;to&nbsp;continue&nbsp;that&nbsp;counts."
+    </blockquote>
+    <br>
+    
+</center>
+<header>Hi I am Ajith</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Skills</a></li>  
+    </ul>
+  </nav>
+</section>
+
+<article>
+
+  <h1>Home</h1>
+  <p>
+    London is the capital city of England. It is the most populous city in
+    the United Kingdom, with a metropolitan area of over 13 million
+    inhabitants.
+  </p>
+</article>
+<br>
+<footer>End of Ajith life</footer><br>
+    <center><h1>DAY2</h1></center>
+    <h2>canvas</h2>
+  <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000;">
+  </canvas>
+
+    <h2>svg</h2>
+    <svg width="200" height="200">
+      <circle
+        cx="100"
+        cy="100"
+        r="50"
+        stroke="green"
+        stroke-width="10"
+        fill="yellow"
+      />
+      Sorry, your browser does not support inline SVG.</svg
+    ><br />
+
+    <h2>html video</h2>
+    <video width="500" controls>
+      <source src="mov_bbb.mp4" type="video/mp4" />
+      <source src="mov_bbb.ogg" type="video/ogg" />
+      Your browser does not support HTML video.
+    </video>
+    <h2>html audio</h2>
+    <audio controls>
+      <source src="horse.ogg" type="audio/ogg" />
+      <source src="horse.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <br />
+    <h2>HTML Geolocation</h2>
+    <h2>Find My Location</h2>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+     
+   <br />
+
+    <h2>Drag and Drop</h2>
+
+    <p>Drag the W3Schools image into the rectangle:</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br />
+    <img
+      id="drag1"
+      src="nar.jpg"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="336"
+      height="69"
+    />
+    <br />
+
+    <div class="main-container">
+        
+    <div class="container">
+      <div class="inside-container"></div>
+      <div class="inside-container"></div>
+      <div class="inside-container"></div>
+      <div class="inside-container"></div>
+      <div class="inside-container"></div>
+      <div class="inside-container"></div>
+    </div>
+  </div>
+<br> -->
+
+
+
+<!-- <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        height: 100px;
+      }
+      section nav {
+        float: left;
+      }
+      section nav ul li {
+        list-style: none;
+      }
+
+      section nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      section {
+        font-size: 30px;
+      }
+      section nav {
+        background-color: blue;
+
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 418px;
+      }
+
+      footer {
+        background-color: red;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        font-size: 30px;
+      }
+
+      article {
+        height: 400px;
+        padding: 20px;
+      }
+      article h1 {
+        margin-left: 20px;
+      }
+      #div1 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+
+      .main-container {
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+        position: sticky;
+        top: 20%;
+        left: 35%;
+      }
+      .container {
+        background-color: black;
+        width: 50%;
+        height: 40%;
+        position: absolute;
+        top: 28%;
+        left: 26%;
+      }
+      .inside-container {
+        background-color: orange;
+        border-radius: 6px;
+        height: 20px;
+        width: 100px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 50px;
+      }
+    </style> -->
