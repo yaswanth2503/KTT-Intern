@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Open+Sans:ital@0;1&display=swap');
+
+:root{
+    --font: 11px;
+    /* --color:rgb(82, 80, 80);     */
+     --color:rgb(68, 67, 67); 
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color);
+    font-size: var(--font);
+   
+}
+
+ /* Overall Container */
+
+.main-container{
+    display: flex;
+    width: 100%;
+}
+
+/* Header Container */
+
+.header-container{
+     display: flex;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     min-width: 600px;
+     flex-wrap: nowrap;
+   
+}
+
+
+
+
+.account-container p{
+    margin-left: 1000px;
+    margin-top: 8px;
+    padding: 2px;
+    padding-left: 5px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.img-container img{
+  padding-bottom: 5px;
+}
+
+
+/* Navbar Container */
+
+
+.nav-container{
+    width: 15vw;
+    /* height: 92vh; */
+    background-color: #062321;
+  
+}
+
+.nav-lists{
+    padding: 10px;
+}
+
+.nav-lists li a{
+    color: rgb(211, 206, 206);
+    text-decoration: none;
+    font-size:  var(--font);
+    
+}
+
+.nav-lists .menu{
+    list-style: none;
+    padding: 12px;
+    border-bottom: 1px solid rgb(211, 206, 206) ;
+   
+}
+
+.nav-container nav input{
+    margin: 10px;
+    border-radius: 20px;
+    padding:5px;
+    border: none;
+    outline: none;
+    font-size:  var(--font);
+}
+
+.arrow-icon{
+    color: white;
+    font-size: 30px;
+    margin-top: 200px;
+}
+
+.sub-menu{
+    list-style: none;
+    margin: 0;
+    
+}
+.sub-menu a:active{
+    background-color: black;
+}
+
+/* JOB CARD LIST  Container  */
+
+.jobcard-list{
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* width: 100vw; */
+    
+}
+
+.jobcard-list-header{
+  display: flex;
+  margin-bottom: -10px;
+  margin-top: 8px;
+  
+
+}
+
+.title p{
+  margin-left: 15px;
+}
+
+.form-check .form-switch{
+  position: relative;
+}
+
+.form-check-label {
+  position: absolute;
+  right: 70px;
+  top: 60px;
+  font-size: 12px;
+}
+
+.form-check-input{
+ position: absolute;
+ right: 30px;
+ top: 57px;
+ font-size: 15px;
+}
+
+
+
+
+
+
+/* vehicle-data  */
+.vehicle-data{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.vehicle-grp1{
+  margin-left: 15px;
+}
+
+.vehicle-grp1 div select,
+.vehicle-grp2 div select,
+.vehicle-grp3 div select{
+  margin-top: 8px;
+  width: 10vw;
+}
+
+.vehicle-grp1 div select option,
+.vehicle-grp2 div select option,
+.vehicle-grp3 div select option{
+ color: var(--color);
+}
+
+
+.vehicle-grp4 div input,
+.vehicle-grp5 div input{
+   margin-top: 8px;
+}
+
+.vehicle-grp2,.vehicle-grp3,.vehicle-grp4,.vehicle-grp5{
+  margin-left: 40px;
+}
+
+.vehicle-grp1 label{
+  margin-right: 60px;
+}
+
+.vehicle-grp2 label{
+  margin-right: 70px;
+}
+
+
+
+
+
+.btn-grp{
+  margin-top: 23px;
+  margin-left: 30px;
+}
+
+.btn-grp button{
+  margin-right: 15px;
+}
+
+/* .hr-style{
+  width: ;
+} */
+
+
+
+
+/* Table-Data  */
+
+table thead tr th{
+text-align: center !important;
+}
+
+
+/* .table-data{
+    font-size:  var(--font);
+    max-width: 700px;
+    max-height: 100px;
+    margin-left: 10px;
+    
+}
+
+table{
+  max-width: 700px;
+    max-height: 100px;
+  overflow-x: auto;
+  overflow-y: auto ;
+} */
+
+.table-responsive{
+  margin-left: 30px;
+}
+
+
+
+
+.dataTables_filter{
+    font-size:  var(--font);
+    
+}
+
+.dataTables_filter input
+{
+    width: 13vw;
+    height: 4vh;
+    margin-right: 50px;
+    font-size:  var(--font);
+}
+
+
+
+.dataTables_length label {
+    font-size: var(--font);
+    margin-bottom: 10px;
+    /* margin-left:  0px; */
+   
+}
+
+div.dataTables_wrapper div.dataTables_length select{
+    width: 50px;
+    font-size:  var(--font);
+}
+
+.dataTables_info{
+    font-size:  var(--font);
+}
+
+.dataTable thead th{
+    color: rgb(105, 105, 105);
+    font-weight: normal;
+    font-size:  var(--font);
+    
+    padding: 40px;
+}
+
+.dataTable tfoot tr td{
+  color: var(--color);
+} 
+
+.dataTable tbody tr td {
+  border-bottom: 1px solid #ddd;
+  padding: 40px;
+  color: var(--color);
+}
+
+
+
+div.dt-buttons {
+position: relative;
+left: 27%;
+}
+
+
+
+.buttons-copy,.buttons-colvis,.buttons-excel {
+    background-color: white !important; 
+    color:gray !important;
+    font-size:  var(--font) !important;
+    
+    
+}
+
+
+
+.dataTables_wrapper .dataTables_paginate .pagination {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.page-item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .page-link {
+  margin: 0 !important;
+  padding: 8px 16px !important;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 0 !important;
+  background-color: white !important;
+  color: #ffa500 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .page-item:last-child .page-link {
+  border-right: 1px solid #ddd;
+  border-radius: 30px;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .page-item.active .page-link {
+  background-color: #ffa500 !important;
+  color: white !important;
+  border-color: #ffa500 !important;
+  z-index: 1;
+}
+
+/* Disabled state */
+.dataTables_wrapper .dataTables_paginate .page-item.disabled .page-link {
+  background-color: #f8f9fa !important;
+  color: #aaa !important;
+  border-color: #ddd !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .page-link:hover,
+.dataTables_wrapper .dataTables_paginate .page-link:focus,
+.dataTables_wrapper .dataTables_paginate .page-link:active,
+.dataTables_wrapper .dataTables_paginate .page-item:hover,
+.dataTables_wrapper .dataTables_paginate .page-item:focus,
+.dataTables_wrapper .dataTables_paginate .page-item:active {
+  background-color: white !important;
+  color: #ffa500 !important;
+  border-color: #ddd !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+.dataTables_wrapper .paginate_button {
+  background-color: white !important;
+  color: #ffa500 !important;
+  /* border: 1px solid #ddd !important; */
+  font-size: 19px !important;
+}
+
+
+.paginate_button:not(.previous):not(.next):hover {
+  background-color: white !important;
+  color: #ffa500 !important;
+}
+
+
+
