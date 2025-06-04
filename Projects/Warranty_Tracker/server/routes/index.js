@@ -8,7 +8,7 @@ const router = express.Router();
 
 const{register,getAllEmployees}=require('../controllers/EmployeeCredentialsController');
 const{createAsset,getAllAssets,updateAsset,deleteAsset}=require('../controllers/assetInventoryController');
-const{createExtension,getAllExtensions}=require('../controllers/warrantyExtensionsController');
+const{createExtension}=require('../controllers/warrantyExtensionsController');
 const{getAllHistory}=require('../controllers/warrantyHistoryController');
 
 
@@ -16,10 +16,10 @@ const{getAllHistory}=require('../controllers/warrantyHistoryController');
 // Employee Credentials Routes
 
 // Create a new employee    
-router.post('/user',register);
+router.post('/createUser',register);
 
 // Get all employees
-router.get('/user',getAllEmployees);
+router.get('/getUser',getAllEmployees);
 
 
 
@@ -45,7 +45,7 @@ router.delete('/asset/:Asset_Id',deleteAsset);
 router.post('/extension',createExtension);
 
 // Get all extensions
-router.get('/extension',getAllExtensions);
+// router.get('/extension',getAllExtensions);
 
 
 

@@ -1,13 +1,31 @@
-const {Employee} = require('../models/EmployeeCredentials');
+const {Employee} = require('../models');
+
+const bcrypt = require('bcrypt');
 
 const register = async (req,res)=>{
     
-    const {Employee_Id,Password} =req.body;
+    
 
     try{  
         
+        const {Employee_Id,Password} =req.body;
+
+        console.log('Register data:', Employee_Id, Password);
+        
+        if (!Password || !Employee_Id) {
+            return res.status(400).json({ success: false, error: "Employee_Id or Password is required" });
+            }
+
+        const empData = [{Employee_Id,Password}];
+        
+
+        const hashedPassword = await bcrypt.hash(Password,10);
+
+        console.log(empData);
+
         const employee =  await Employee.create({
-            Employee_Id,Password
+            Employee_Id,
+            Password:hashedPassword
         });
 
         res.status(201).json({

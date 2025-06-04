@@ -18,11 +18,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', apiRoutes);
 
 
-// app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/public/login.html"));
+
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname,'..','client','public','login.html'));
 })
+
+app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
 
 
 sequelize.sync()

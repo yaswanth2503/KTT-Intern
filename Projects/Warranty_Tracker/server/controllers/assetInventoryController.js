@@ -1,4 +1,4 @@
-const {Asset} = require('../models/AssetInventory');
+const {Asset} = require('../models');
 
 const createAsset = async (req,res)=>{
     console.log(req.body);
