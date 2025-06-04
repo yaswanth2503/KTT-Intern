@@ -14,7 +14,7 @@ const WarrantyHistory = sequelize.define('WarrantyHistoryLogs', {
     allowNull:false
   },
   Asset_Id: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.STRING,
     allowNull: false,
   },
   Serial_Number: {

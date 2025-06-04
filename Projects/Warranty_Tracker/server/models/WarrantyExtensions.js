@@ -10,7 +10,7 @@ const WarrantyExtension = sequelize.define('Warranty_Extensions', {
       autoIncrement:true
   },  
   Asset_Id: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.STRING,
     allowNull: false,
   },
  
@@ -19,7 +19,7 @@ const WarrantyExtension = sequelize.define('Warranty_Extensions', {
     allowNull: false,
   },
   Purchased_Date: {
-    type: DataTypes.DATEONLY,
+    type: DataTypes.DATE,
     allowNull: false,
   },
   Warranty_Start_Date: {
@@ -35,20 +35,16 @@ const WarrantyExtension = sequelize.define('Warranty_Extensions', {
     allowNull: false,
   },
   Extend_Warranty_in_Months: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.SMALLINT,
     allowNull: false,
   }
 }, {
   tableName: 'Warranty_Extensions',
   timestamps: true,
   indexes:[
-    {fields:['Asset_Id']}
+    {fields:['History_Id']}
   ],
-  hooks:{
-    beforeDestroy:(Warranty_Extension,options)=>{
-      throw new Error('Deleting warranty extension directly is not allowed.')
-    }
-  }
+ 
 });
 
 

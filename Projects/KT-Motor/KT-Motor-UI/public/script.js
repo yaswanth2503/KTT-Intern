@@ -3,6 +3,7 @@
 const sidebar = document.getElementById("sidebar");
 const toggleSidebar = document.getElementById("toggle-sidebar");
 const openSidebar = document.getElementById("open-sidebar");
+const jobcardList = document.getElementById("jobcard-list");
 
 toggleSidebar.addEventListener("click",()=>{
      sidebar.classList.toggle("collapsed");
@@ -13,6 +14,7 @@ toggleSidebar.addEventListener("click",()=>{
     sidebar.style.display = "none";
     toggleSidebar.style.display = "none";
     openSidebar.style.display = "inline";
+    jobcardList.style.width="100%";
 
 });
 
@@ -28,6 +30,7 @@ openSidebar.addEventListener("click",()=>{
 $(document).ready(function () {
     $('#table-data').DataTable({
         scrollX: true,
+        scrollY: true,
         scrollCollapse: true,
         responsive: false,
         lengthChange: true, 
