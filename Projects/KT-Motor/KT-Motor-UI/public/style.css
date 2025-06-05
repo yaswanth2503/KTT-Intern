@@ -15,14 +15,19 @@
     font-family: 'Open Sans', sans-serif;
     color: var(--color);
     font-size: var(--font);
+    scroll-behavior: smooth;
+    
    
 }
+
+
 
  /* Overall Container */
 
 .main-container{
     display: flex;
     width: 100%;
+     
 }
 
 /* Header Container */
@@ -30,86 +35,244 @@
 .header-container{
      display: flex;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     min-width: 600px;
+     /* min-width: 600px; */
      flex-wrap: nowrap;
+     
    
 }
 
 
 
 
-.account-container p{
-    margin-left: 1000px;
-    margin-top: 8px;
-    padding: 2px;
-    padding-left: 5px;
-    border-radius: 30px;
+.account-container{
+   
+    position: relative;
+    width: 100%;
+    
+}
+
+/* .down-icon{
+  margin-left: 5px;
+  font-size: 16px;
+} */
+
+.account-container label{
+ 
+    width: 60px;
+    border-radius: 20px;
+    /* padding-left: 12px;  */
+    padding: 3px 0px 3px 12px;
+    
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    top: 10px;
+    right:10px;
 }
 
 .img-container img{
-  padding-bottom: 5px;
+  margin: 5px 0px 5px 2px;
 }
 
 
 /* Navbar Container */
 
 
-.nav-container{
-    width: 15vw;
-    /* height: 92vh; */
-    background-color: #062321;
+/* .nav-container{
+
+
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #011014;  
+  border-radius: 10px;      
+  /* border: 3px solid transparent; */
+ 
+
+
+/* .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background-color: #011014;
+} */
+
+
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color:#011014 transparent;
+}
+
+
+.accordion-body {
+  background-color: #011014 !important;
+}
+
+.accordion-collapse {
+  background-color: #011014 !important;
+}
+
+.list-group-item {
+  background-color: #011014 !important;
+  color: white;
+  border: none;
+}
+
+
+.accordion{
+    width: 20vw;
+    background-color: #011014;
+    height: 120vh;
+    margin: 0px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.accordion-button,
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+
+
+.accordion-button::after {
+  display: none !important;
+}
+
+.accordion-button .arrow-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+
+.accordion-button:not(.collapsed) .arrow-icon {
+  transform: rotate(90deg); 
+}
+
+
+
+
+.accordion-body {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  background-color:#011014; 
+  /* width: 100px; */
+   border: none;
+  outline: none;
+  
+ 
+}
+
+.accordion-item  .accordion-button :hover{
+  background-color: #021c24;
+}
+
+.accordion-item{
+  width: 14vw;
+  border: none;
+  outline: none;
+  margin-left: 25px;
+  /* padding: 10px !important; */
   
 }
 
-.nav-lists{
-    padding: 10px;
+.accordion-button,
+.accordion-body,
+.accordion-item,
+.list-group-item {
+  background-color: transparent !important;
+  color: white;
+  border: none;
 }
 
-.nav-lists li a{
-    color: rgb(211, 206, 206);
-    text-decoration: none;
-    font-size:  var(--font);
-    
+
+
+.accordion-collapse.show .accordion-body {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.nav-lists .menu{
-    list-style: none;
-    padding: 12px;
-    border-bottom: 1px solid rgb(211, 206, 206) ;
-   
+.accordion-collapse{
+  border: none;
+  outline:none;
 }
 
-.nav-container nav input{
-    margin: 10px;
-    border-radius: 20px;
-    padding:5px;
-    border: none;
-    outline: none;
-    font-size:  var(--font);
+
+
+ .accordion .accordion-button{
+  background-color: #011014;
+ 
+  color: #ffff;
+  margin-right: 10px !important;
+  
 }
 
-.arrow-icon{
-    color: white;
-    font-size: 30px;
-    margin-top: 200px;
+.accordion-button:focus{
+  box-shadow: none !important;
 }
 
-.sub-menu{
-    list-style: none;
-    margin: 0;
-    
+.search{
+  margin: 10px;
+  position: relative;
 }
-.sub-menu a:active{
-    background-color: black;
+
+.search input{
+  border-radius: 20px;
+  padding-left: 35px;
+  font-size: var(--font);
+  width: 14vw;
 }
+
+.search span{
+  position: absolute;
+  top: 1px;
+  left: 12px;
+}
+
+.vehicle a{
+  margin-left: 35px;
+  padding: 5px;
+}
+
+.reports a{
+  margin-left: 40px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+
+.list-group .list-group-item{
+  background-color:#011014 ;
+  border: none;
+  outline: none;
+}
+
+.list-group .list-group-item a:visited{
+  color: orange;
+}
+
+.accordion-footer footer{
+  margin-top: 100px;
+  background-color: #011014;
+  color: white;
+}
+ 
 
 /* JOB CARD LIST  Container  */
 
 .jobcard-list{
     margin: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* width: 100vw; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+    width: 100vw;
+    position: relative;
+    
     
 }
 
@@ -132,14 +295,14 @@
 .form-check-label {
   position: absolute;
   right: 70px;
-  top: 60px;
+  top: 12px;
   font-size: 12px;
 }
 
 .form-check-input{
  position: absolute;
  right: 30px;
- top: 57px;
+ top: 9px;
  font-size: 15px;
 }
 
@@ -178,16 +341,20 @@
    margin-top: 8px;
 }
 
-.vehicle-grp2,.vehicle-grp3,.vehicle-grp4,.vehicle-grp5{
+.vehicle-grp2,.vehicle-grp3,.vehicle-grp4{
   margin-left: 40px;
 }
 
+.vehicle-grp5{
+  margin-left: 20px;
+}
+
 .vehicle-grp1 label{
-  margin-right: 60px;
+  margin-right: 50px;
 }
 
 .vehicle-grp2 label{
-  margin-right: 70px;
+  margin-right: 65px;
 }
 
 
@@ -203,9 +370,7 @@
   margin-right: 15px;
 }
 
-/* .hr-style{
-  width: ;
-} */
+
 
 
 
@@ -215,6 +380,11 @@
 table thead tr th{
 text-align: center !important;
 }
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
 
 
 /* .table-data{
@@ -234,6 +404,7 @@ table{
 
 .table-responsive{
   margin-left: 30px;
+  /* margin-top: 40px; */
 }
 
 
@@ -275,7 +446,7 @@ div.dataTables_wrapper div.dataTables_length select{
     font-weight: normal;
     font-size:  var(--font);
     
-    padding: 40px;
+    /* padding: 40px; */
 }
 
 .dataTable tfoot tr td{
@@ -284,7 +455,7 @@ div.dataTables_wrapper div.dataTables_length select{
 
 .dataTable tbody tr td {
   border-bottom: 1px solid #ddd;
-  padding: 40px;
+  padding: 15px;
   color: var(--color);
 }
 

@@ -38,6 +38,8 @@
 
     <link rel="stylesheet" href="./style.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
@@ -49,8 +51,9 @@
   <body>
     <div class="original-container">
       <div class="header-container">
-        <div class="img-container">
-          <span class="main">
+
+        <div class="open-close">
+           <span class="main">
             <i
               class="ri-close-line"
               id="toggle-sidebar"
@@ -71,103 +74,266 @@
               "
             ></i>
           </span>
-
-
-
-          <img src="./ktmotor-logo.png" alt="Kt_Motor_CRM" />
+        </div>
+        <div class="img-container">
+         <img src="./ktmotor-logo.png" alt="Kt_Motor_CRM" />
         </div>
 
         <div class="account-container">
-          <p>
-            Dev <span><i class="ri-arrow-drop-down-fill"></i></span>
-          </p>
+          <label>
+            Dev <span><i class="ri-arrow-drop-down-fill down-icon"></i></span>
+          </label>
         </div>
       </div>
 
       <div class="main-container">
-        <div class="nav-container" id="sidebar">
-          <nav>
-            <input type="search" placeholder="Search Menus" />
-            <ul class="nav-lists">
-              <li class="menu">
-                <a href="#">Vehicle Inward</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
+    
 
-              <li class="menu">
-                <a href="#">Masters</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon1"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Jobs</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Parts</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Tyres</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
+        
+<div class="accordion overflow-y-auto" id="sidebar">
 
-              <li class="menu">
-                <a href="#">Job Cards</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-                <ul>
-                  <li class="sub-menu"><a href="#">Dashboard</a></li>
-                  <li class="sub-menu">
-                    <a href="#jobcard-list">Job Card Lists</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu">
-                <a href="#">Inventory</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Purchasing</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Accounting</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Reports</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-              <li class="menu">
-                <a href="#">Devops</a
-                ><span
-                  ><i class="ri-arrow-drop-right-line arrow-icon"></i
-                ></span>
-              </li>
-            </ul>
-          </nav>
-        </div>
+  <div class="search mb-3">
+    <span class="input-group-text bg-transparent border-0 text-white"><i class="bi bi-search"></i></span>
+    <input type="search" class="form-control" placeholder="Search menus">
 
+  </div>
+
+  <div class="vehicle">
+  
+    <a href="#" class="nav-link text-white px-0 align-middle w-100">
+      <i class="fa-solid fa-truck" style="color: white; margin-left: 5px;"></i>
+       Vehicle Inward
+      </a>
+
+  </div>
+  <hr>
+
+  <div class="accordion-item">
+  
+    
+  </span>
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <i class="fa-solid fa-database"
+      style="color: white; margin-right: 5px;"
+       ></i>   
+       Masters 
+       <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+    </button>
+
+     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+ <hr>
+
+  <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+        Jobs
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+ <hr>
+    <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+        <i class="ri-settings-3-line" style="color: white; margin-right: 5px;"></i>
+         Parts
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseThree" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+ <hr>
+    <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+        Tyres
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+ <hr>
+    <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+       <i class="fa-solid fa-clipboard-list"
+       style="color: white; margin-right: 5px;"
+       ></i>
+     
+          Job Cards
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item">
+           
+            <a href="" class="nav-link text-white px-0 align-middle w-100">
+               <!-- <i class="fa-solid fa-grid-horizontal" style="color: white; margin-right: 5px;"></i> -->
+              Dashboard</a></li>
+           <li class="list-group-item"><a href="#jobcard-list" class="nav-link text-white px-0 align-middle w-100">Job Card List</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+ <hr>
+    <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+       <i class="fa-solid fa-warehouse" style="color: white; margin-right: 5px;"></i>
+        Inventory
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+ <hr>
+    <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+        <i class="fa-solid fa-cart-shopping" style="color: white; margin-right: 5px;"></i>
+        Purchasing
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+   <hr>
+    <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
+        Accounting
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    
+    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+          <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+   <div class="reports">
+  
+    <a href="#" class="nav-link text-white px-0 align-middle w-100"> Reports</a>
+
+  </div>
+  <hr>
+
+      <div class="accordion-item">
+   
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseOne">
+       <i class="fa-solid fa-laptop-code" style="color: white; margin-right: 5px;"></i>
+        Dev Ops
+        <i
+       class="ri-arrow-right-s-line arrow-icon ms-auto" 
+       style="color: gray; margin-top: 0px; margin-left: 110px; font-size: 20px;">
+      </i>
+      </button>
+    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul class="list-group">
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+           <li class="list-group-item"><a href="" class="nav-link text-white px-0 align-middle w-100">lorem</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item ">
+    <div class="accordion-footer">
+       <footer>© 2025 KT Motors Pvt. Ltd</footer>
+    </div>
+  </div>
+
+  </div>
+        
+        
         <div class="jobcard-list" id="jobcard-list">
+
 
           <div class="jobcard-list-header">
 
@@ -176,7 +342,7 @@
             <p>JOB CARD LIST </p>
           </div>
 
-            <div class="form-check form-switch">
+            <div class="form-check form-switch ">
               <label class="form-check-label" for="toggle-btn">More Filters</label>
               <input class="form-check-input" type="checkbox" role="switch" id="toggle-btn">
               
@@ -185,7 +351,7 @@
             <hr>
           
 
-          <div class="container-fluid vehicle-data">
+          <div class="vehicle-data">
             <div class="vehicle-grp1">
               <label for="transport">Transport</label>
 
@@ -262,12 +428,13 @@
             </div>
           </div>
 
-          
-          <hr class="hr-style"/>
+           <hr> 
+     
 
-          <!-- <div class="table-data"> -->
-            <div class="table-responsive table-wrapper" style="overflow-x: auto; overflow-y: auto; max-height: 800px; max-width: 1050px;">
-            <table id="table-data" class="table table-bordered text-nowrap">
+
+        
+            <div class="table-responsive table-wrapper" style="max-height: 800px; max-width: 1050px; margin-top: 20px;" >
+            <table id="table-data" class="table table-bordered text-nowrap" >
               <thead class="text-nowrap text-center">
                 <tr>
                   <th>Number</th>
@@ -373,10 +540,10 @@
               </tbody>
               <tfoot>
                 <tr>
-                 <td>Total</td> 
+                 <td colspan="11">Total</td> 
                 </tr>
               </tfoot>
-            </table>
+            </table>  
           </div>
         </div>
       </div>

@@ -6,15 +6,16 @@ const openSidebar = document.getElementById("open-sidebar");
 const jobcardList = document.getElementById("jobcard-list");
 
 toggleSidebar.addEventListener("click",()=>{
-     sidebar.classList.toggle("collapsed");
-     setTimeout(function () {
-     $($.fn.dataTable.tables(true)).DataTable().columns.adjust().draw();
-     }, 100);
+    //  sidebar.classList.toggle("collapsed");
+    //  setTimeout(function () {
+    //  $($.fn.dataTable.tables(true)).DataTable().columns.adjust().draw();
+    //  }, 100);
 
     sidebar.style.display = "none";
     toggleSidebar.style.display = "none";
     openSidebar.style.display = "inline";
-    jobcardList.style.width="100%";
+    // jobcardList.style.width="1200px";
+    // jobcardList.style.marginTop="0px";
 
 });
 
