@@ -15,13 +15,15 @@ const register = async (req,res)=>{
         if (!Password || !Employee_Id) {
             return res.status(400).json({ success: false, error: "Employee_Id or Password is required" });
             }
+      
+        //  const emp_id=612;
+        //  const pass='admin@123';
 
-        const empData = [{Employee_Id,Password}];
-        
+        //  if(Employee_Id==emp_id && Password==pass){
 
-        const hashedPassword = await bcrypt.hash(Password,10);
-
-        console.log(empData);
+         const hashedPassword = await bcrypt.hash(Password,10);
+          
+      
 
         const employee =  await Employee.create({
             Employee_Id,
@@ -32,6 +34,14 @@ const register = async (req,res)=>{
             success:true,
             result:employee
         });
+    // }  
+
+    // else{
+    //     return res.status(400).json({
+    //         success:false,
+    //         message:'Employee_Id or Password is incorrect'
+    //     });
+    // }
 
     }
 

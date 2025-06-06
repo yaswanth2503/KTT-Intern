@@ -231,7 +231,55 @@ function loadFilter(event) {
 
 
 
+const assetForm = document.getElementById('asset-form');
 
+assetForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+    
+    const formData = {
+         Asset_Id:document.getElementById('asset-id').value,
+          Employee_Id:parseInt(document.getElementById('employee-id').value),
+           Serial_Number:document.getElementById('serial-no').value,
+            Category:document.getElementById('category').value, 
+            Brand:document.getElementById('brand').value,
+             Model:document.getElementById('model').value, 
+             Purchased_From:document.getElementById('purchased-from').value, 
+          Purchased_Date:document.getElementById('purchased-date').value,
+          Warranty_Start_Date:document.getElementById('warranty-start-date').value, 
+          Warranty_End_Date:document.getElementById('warranty-end-date').value,
+          Warranty_Extendable:document.getElementById('extendable').value,
+          Asset_Price:parseFloat(document.getElementById('price').value),
+          Asset_Images:document.getElementById('images').value
+    }
+
+
+
+ try{
+    const response = await fetch('http://localhost:3000/api/createAsset',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(formData)
+    });
+    const result= await response.json();
+
+    if(response.ok){
+        console.log(result.message);
+        alert("Asset created successfully");
+    }
+
+    else{
+        alert("Asset creation failed");
+        console.log(formData);
+        console.log(result.message);
+
+    }
+ }
+
+ catch(error){
+    console.error('Error in creating asset',error.message)
+ }
+
+ });
 
 
 
