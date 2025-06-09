@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 
 
 module.exports = (sequelize) => {
-  const JobCardList = sequelize.define('JobCardList', {
+  const JobCards = sequelize.define('JobCards', {
     Number: {
       type: DataTypes.STRING,
       allowNull: false
@@ -41,9 +41,9 @@ module.exports = (sequelize) => {
         allowNull: false
       }
   }, {
-    tableName: 'JobCardList',
+    tableName: 'JobCards',
     timestamps: true 
   });
 
-  return JobCardList;
+  return JobCards;
 };

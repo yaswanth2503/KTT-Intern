@@ -36,6 +36,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Tempus Dominus Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/css/tempus-dominus.min.css" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -358,8 +361,11 @@
               <input type="checkbox" />
 
               <div>
-                <select class="form-select">
-                  <option value="transport">Transport</option>
+                <select class="form-select" id="transport">
+                  <option value="transport" selected>Select Transport</option>
+                  <option value="fasttrans">FastTrans</option>
+                  <option value="quickmove">QuickMove</option>
+                  <option value="transfast">TransFast</option>
                 </select>
               
               </div>
@@ -371,8 +377,12 @@
               <span>All</span>
               <input type="checkbox" />
                <div>
-                 <select class="form-select">
-              <option value="vehicle">Select Vehicle</option>
+                 <select class="form-select" id="vehicle">
+              <option value="vehicle" selected>Select Vehicle</option>
+
+            <option value="truck-12"> Truck-12</option>
+            <option value="van-7">Van-7</option>
+            <option value="truck-8"> Truck-8</option>
             </select>
               </div>
             </div>
@@ -380,8 +390,11 @@
             <div class="vehicle-grp3">
               <label for="number">Number</label>
               <div>
-                 <select class="form-select">
-              <option value="number">Select Numbers</option>
+                 <select class="form-select" id="number">
+              <option value="number" selected>Select Number</option>
+              <option value="jc1"> JC1001</option>
+              <option value="jc2"> JC1002</option>
+              <option value="jc3"> JC1003</option>
             </select>
               </div>
             </div>
@@ -389,7 +402,7 @@
             <div class="vehicle-grp4">
               <label for="start-date">Start Date</label>
               <div>
-                  <input type="datetime-local" id="datetime1" class="form-control" />
+                  <input type="text" id="start-date" class="form-control" />
               </div>
 
             </div>
@@ -397,7 +410,7 @@
             <div class="vehicle-grp5">
               <label for="end-date">End Date</label>
               <div>
-                <input type="datetime-local" id="datetime2" class="form-control" />
+                <input type="text" id="end-date" class="form-control" />
               </div>
             </div>
 
@@ -406,6 +419,7 @@
                 type="button"
                 class="btn btn-secondary"
                 style="font-size: 13px; color: white"
+                id="clear-filter"
               >
                 Clear
                 <i
@@ -417,6 +431,7 @@
                 type="button"
                 class="btn btn-warning"
                 style="color: white; font-size: 13px"
+                id="load-filter"
               >
                 Load
                 <i
@@ -481,6 +496,12 @@
 
     <!-- JSZip for Excel export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- Popperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha256-BRqBN7dYgABqtY9Hd4ynE+1slnEw+roEPFzQ7TRRfcg=" crossorigin="anonymous"></script>
+    <!-- Tempus Dominus JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/js/tempus-dominus.min.js" crossorigin="anonymous"></script>
+
 
     <script src="./js/script.js"></script>
   </body>
