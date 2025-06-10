@@ -1,6 +1,11 @@
 
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+
 
 
 
@@ -26,7 +31,7 @@ router.get('/getUser',getAllEmployees);
 // Asset Inventory Routes
 
 // Create a new asset
-router.post('/asset',createAsset);
+router.post('/asset',upload.array('images', 10),createAsset);
 
 // Get all assets
 router.get('/asset',getAllAssets);

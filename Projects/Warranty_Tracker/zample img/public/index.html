@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload Multiple Images</title>
+</head>
+<body>
+  <h1>Upload Multiple Images</h1>
+  <form id="uploadForm">
+    <input type="file" name="images" accept="image/*" multiple required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Uploaded Images</h2>
+  <div id="images"></div>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const imagesDiv = document.getElementById('images');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const files = form.querySelector('input[type="file"]').files;
+      if (files.length === 0) {
+        alert('Please select images');
+        return;
+      }
+
+      const formData = new FormData();
+      for (const file of files) {
+        formData.append('images', file);
+      }
+
+      const res = await fetch('/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (res.ok) {
+        alert('Images uploaded successfully!');
+        loadImages();
+        form.reset();
+      } else {
+        alert('Upload failed');
+      }
+    });
+
+    async function loadImages() {
+      imagesDiv.innerHTML = 'Loading...';
+      const res = await fetch('/images');
+      if (!res.ok) {
+        imagesDiv.innerHTML = 'Failed to load images';
+        return;
+      }
+      const records = await res.json();
+      if (records.length === 0) {
+        imagesDiv.innerHTML = 'No images found';
+        return;
+      }
+
+      imagesDiv.innerHTML = '';
+
+      // Each record contains id and name (comma-separated names)
+      records.forEach(record => {
+        const container = document.createElement('div');
+        container.style.marginBottom = '20px';
+
+        const title = document.createElement('h3');
+        title.textContent = `Record ID: ${record.id}, Images: ${record.name}`;
+        container.appendChild(title);
+
+        // Names are comma-separated, so count images by splitting names
+        const imageCount = record.name.split(',').length;
+
+        for (let i = 1; i <= imageCount; i++) {
+          const img = document.createElement('img');
+          img.src = `/images/${record.id}/${i}`;
+          img.alt = `Image ${i}`;
+          img.style = 'max-width: 150px; margin-right: 10px; border: 1px solid #ccc; padding: 5px;';
+          container.appendChild(img);
+        }
+
+        imagesDiv.appendChild(container);
+      });
+    }
+
+    loadImages();
+  </script>
+</body>
+</html>
