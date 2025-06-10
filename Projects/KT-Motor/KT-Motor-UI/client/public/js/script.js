@@ -28,8 +28,8 @@ e.preventDefault();
       topStart: 'buttons',
       topEnd: 'pageLength'
     },
-    pageLength: 4,
-    lengthMenu: [4, 10, 20, 25],
+    // pageLength: 5,
+    lengthMenu: [5, 10, 20, 25],
     buttons: [
       {
         extend: 'columnsToggle',
@@ -126,11 +126,16 @@ display: {
     // let startDate = document.getElementById('start-date').value.trim();
     // let endDate = document.getElementById('end-date').value.trim();
 
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(); 
     
     if(transport) params.append('transport',transport);
     if(vehicle) params.append('vehicle',vehicle);
     if(number) params.append('number',number);
+
+      if (!transport && !vehicle && !number) {
+        alert("Please select at least one filter before loading.");
+        return;
+      }
 
 
  fetch(`api/filterJobCards?${params.toString()}`)
@@ -184,17 +189,15 @@ display: {
     transport.selectedIndex = 0;
     vehicle.selectedIndex = 0;
 
-    dataTable.columns().search('').draw();
+    //  number.value = '';
+    //  transport.value = '';
+    //  vehicle.value = '';
 
-  })
-
-
-
-  fetch('/api/getJobCards')
-    .then(res => res.json())
-    .then(data => {
-      if (data.success && Array.isArray(data.result)) {
-        const formattedRows = data.result.map(item => [
+     fetch('/api/getJobCards')
+     .then(res =>res.json())
+     .then(data =>{
+      if(data.success && Array.isArray(data.result)){
+        const loadData = data.result.map(item => [
           item.Number,
           item.ClientName,
           item.TransportName,
@@ -207,7 +210,35 @@ display: {
         ]);
 
         dataTable.clear();
-        dataTable.rows.add(formattedRows);
+        dataTable.rows.add(loadData);
+        dataTable.draw();
+      }
+     })
+     .catch(err => console.error('Error in reloading the job cards',err));
+   
+
+  })
+
+
+
+  fetch('/api/getJobCards')
+    .then(res => res.json())
+    .then(data => {
+      if (data.success && Array.isArray(data.result)) {
+        const fetchRows = data.result.map(item => [
+          item.Number,
+          item.ClientName,
+          item.TransportName,
+          item.Vehicle,
+          item.Vehicle_Inward,
+          new Date(item.JcTime).toLocaleString(),
+          new Date(item.Vehicle_In_Time).toLocaleString(),
+          new Date(item.Vehicle_Out_Time).toLocaleString(),
+          new Date(item.Closing_Time).toLocaleString()
+        ]);
+
+        dataTable.clear();
+        dataTable.rows.add(fetchRows);
         dataTable.draw();
       }
     })

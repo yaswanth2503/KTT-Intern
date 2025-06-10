@@ -7,18 +7,20 @@ const getJobCards = async (req,res)=>{
   
      
        try{
-        // console.log('Filter Object:', filterObj);
+       
           const jobcardlist = await JobCards.findAll();
-          res.status(200).json({
+          console.log('Total rows count:', jobcardlist.length);
+
+         return  res.status(200).json({
             success:true,
             result:jobcardlist
           })
-            console.log('Filtered results count:', filter.length);
+           
        }
 
         catch(error){
         console.log("Error in getting all jobcard",error)
-        res.status(500).json({
+        return res.status(500).json({
             success:false,
             error:error.message
         });
@@ -45,17 +47,19 @@ const filterJobCards = async (req,res)=>{
     if(number && number.trim())
       filterObj.Number = {[Op.iLike]:`%${number.trim()}%`};
 
-    const filter = await JobCards.findAll({where: filterObj});
+    const result = await JobCards.findAll({where: filterObj});
 
-    res.status(200).json({
+     console.log('Filtered results count:', result.length);
+
+    return res.status(200).json({
       message:'Job Cards filtered successfully',
-      result:filter
+      result
       
     });
 }
 
   catch(error){
-    res.status(500).json(
+     return res.status(500).json(
       
       {
       success:false,
