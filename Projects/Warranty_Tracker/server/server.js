@@ -49,7 +49,7 @@ const { sequelize, Asset } = require('./models');
 const apiRoutes = require('./routes/index');
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // Middleware
 app.use(cors());
@@ -68,7 +68,7 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'client', 'public', 'login.html'));
 });
 
-sequelize.sync()
+sequelize.sync({alter:true})
   .then(() => {
     console.log('Database synced');
     app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

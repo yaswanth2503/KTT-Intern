@@ -239,44 +239,6 @@
 //     // }
 // }
 
-// function cancelHistoryForm(event) {
-//     event.preventDefault();
-//     warrantyHistoryPopup.style.display = 'none';  
-// }
-
- 
-
-// // show images 
-
-// const imageViewerPopup = document.getElementById('imageViewerPopup');
-// const imageViewerContent = document.getElementById('imageViewerContent');
-
-// function viewImages(button, filenames) {
-//     imageViewerContent.innerHTML = ''; // Clear existing content
-//     const imageArray = filenames.split(','); // Split filenames into an array
-
-//     imageArray.forEach(filename => {
-//         const img = document.createElement('img');
-//         img.src = '/public/uploads/' + filename;  // Use the correct path to serve images
-//         img.alt = filename; // Set alt text for accessibility
-//         imageViewerContent.appendChild(img); // Append each image to the content div
-//     });
-
-//     imageViewerPopup.style.display = 'flex';  // Show the popup (use flex to center content)
-// }
-// function closeImageViewer() {
-//     imageViewerPopup.style.display = 'none';
-//     imageViewerContent.innerHTML = '';
-// }
-
-// // filter 
-// function loadFilter(event) {
-//     event.preventDefault();
-//     const categoryFilter = document.getElementById('filter-category').value;
-//     const brandFilter = document.getElementById('filter-brand').value;
-//     const modelFilter = document.getElementById('filter-model').value;
- 
-// }   
 
 
 
@@ -361,10 +323,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     return;
   }
 
-  // Function to load asset data into DataTable
+ 
   async function loadAssets() {
     try {
-      const response = await fetch('http://localhost:3000/api/assets');
+      const response = await fetch('http://localhost:4000/api/asset');
       const result = await response.json();
 
       if (response.ok && Array.isArray(result.result)) {
@@ -433,7 +395,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     formData.append('Asset_Price', document.getElementById('price').value);
 
     try {
-      const response = await fetch('http://localhost:3000/api/asset', {
+      const response = await fetch('http://localhost:4000/api/asset', {
         method: 'POST',
         body: formData
       });
@@ -585,4 +547,33 @@ function loadFilter(event) {
 
 // fetching data from db
 
-fetch('api/')
+fetch('api/asset')
+.then(res => res.json())
+.then(data => {
+ 
+   if(data.success && Array.isArray(data.result)){
+    const fetchRows = data.result.map(asset =>[
+      asset.Asset_Id,
+      asset.Employee_Id,
+      asset.Serial_Number,
+      asset.Category,
+      asset.Brand,
+      asset.Model,
+      asset.Purchased_From,
+      asset.Purchased_Date,
+      asset.Warranty_Start_Date,
+      asset.Warranty_End_Date,
+      asset.Warranty_Extendable,
+      asset.Asset_Price,
+      asset.Asset_Images
+    ]);
+
+  dataTable.clear();
+  dataTable.rows.add(fetchRows);
+  dataTable.draw();
+  dataTable.columns.adjust();
+   }
+})
+.catch(error => {
+  console.error('Error fetching assets:', error.message);
+});

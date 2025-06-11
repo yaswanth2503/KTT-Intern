@@ -17,6 +17,7 @@ module.exports = (sequelize) => {
     Serial_Number: {
       type: DataTypes.STRING(255),
       allowNull: true,
+      unique: true,
     },
     Category: {
       type: DataTypes.TEXT('medium'),

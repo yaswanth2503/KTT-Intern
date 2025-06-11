@@ -8,12 +8,12 @@ const getJobCards = async (req,res)=>{
      
        try{
        
-          const jobcardlist = await JobCards.findAll();
-          console.log('Total rows count:', jobcardlist.length);
+          const jobcards = await JobCards.findAll({});
+          console.log('Total rows count:', jobcards.length);
 
          return  res.status(200).json({
             success:true,
-            result:jobcardlist
+            result:jobcards
           })
            
        }
@@ -60,7 +60,6 @@ const filterJobCards = async (req,res)=>{
 
   catch(error){
      return res.status(500).json(
-      
       {
       success:false,
       message:'Error in filtering job cards',

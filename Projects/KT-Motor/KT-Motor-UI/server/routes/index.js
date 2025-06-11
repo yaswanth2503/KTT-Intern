@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const{getJobCards,filterJobCards}=require('../controllers/jobcardlistController');
+const{getJobCards,filterJobCards}=require('../controllers/jobcards');
 
 
 router.get('/getJobCards',getJobCards);

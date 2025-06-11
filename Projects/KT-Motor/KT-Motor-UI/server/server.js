@@ -5,7 +5,7 @@ const sequelize = require('./config/database');
 const apiRoutes = require('./routes/index');
 
 const app = express();
-const PORT = 8000;
+const PORT = 8080;
 
 // Middleware
 app.use(cors());

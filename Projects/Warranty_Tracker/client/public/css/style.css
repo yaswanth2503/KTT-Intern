@@ -349,13 +349,15 @@
     border: 1px solid #ddd;
 }
 
-#table thead tr th {
+.dataTable thead  th {
     /* background-color: rgb(60, 141, 60); */
-    background-color:#4CAF50;
+    background-color:#4CAF50 ;    
     color: white;
     text-align: center;
-    position: sticky;
-    top: 0;
+    border: none;
+   
+    flex-wrap: nowrap;
+    
 }
 
 
