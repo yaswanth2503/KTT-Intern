@@ -17,22 +17,60 @@
         <div class="login-container">
             
    
-            <form action="">
+            <form action="" id="form">
                 <p>Sign In</p>
                <div class="input-container">
                     <label for="username">Username</label><br>
-                    <input type="text" name="username" autocomplete="off">
+                    <input type="text" name="username" autocomplete="off" id="username">
                </div>
 
                 <div class="input-container">
-                    <label for="pass">Password</label><br>
-                    <input type="password" name="pass">
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password">
                </div>
 
                <button>Sign In</button>
             </form>
         </div>
     </div>
+
+
+    <script>
+  const form = document.getElementById('form');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
+      };
+
+      try {
+        let response = await fetch('http://localhost:8080/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          console.log(result.message);
+          
+        } else {
+          console.log(result.message);
+          window.location.href = '/index.html';
+        }
+      } catch (err) {
+        console.log('Login failed:', err.message);
+        
+      }
+    });
+  });
+</script>
+
     
 </body>
 </html>

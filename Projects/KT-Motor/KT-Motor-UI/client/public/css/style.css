@@ -37,41 +37,60 @@
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
      /* min-width: 600px; */
      flex-wrap: nowrap;
-     
+     position: relative;
    
+}
+
+.img-container img{
+  margin: 5px 0px 5px 2px;
 }
 
 
 
 
-.account-container{
+
+/* .account-container{
    
     position: relative;
     width: 100%;
     
-}
+} */
 
 /* .down-icon{
   margin-left: 5px;
   font-size: 16px;
 } */
 
-.account-container label{
+/* .account-container label{
  
     width: 60px;
     border-radius: 20px;
-    /* padding-left: 12px;  */
+   
     padding: 3px 0px 3px 12px;
     
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: absolute;
     top: 10px;
     right:10px;
+} */
+
+ .dropdown {
+   position: absolute;
+   top:10px;
+   right: 20px;
+   border-radius: 20px;
+ }
+
+.dropdown .account{
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   border-radius: 20px;
 }
 
-.img-container img{
-  margin: 5px 0px 5px 2px;
+.dropdown a:active{
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   /* border: none; */
 }
+
 
 
 /* Navbar Container */

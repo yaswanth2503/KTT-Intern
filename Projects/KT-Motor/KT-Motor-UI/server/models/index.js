@@ -1,9 +1,12 @@
 const sequelize = require('../config/database');
 
-const defineJobcards = require('./jobcardlist');
+const defineJobcards = require('./jobcards');
+const defineEmployee = require('./employeeCredentials');
 
-const JobCards = defineJobcards(sequelize);
+const jobcards = defineJobcards(sequelize);
+const employee = defineEmployee(sequelize);
 
 module.exports = {
-    JobCards:JobCards
-};
+    jobcards,
+    employee
+};  

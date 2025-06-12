@@ -138,7 +138,7 @@ display: {
       }
 
 
- fetch(`api/filterJobCards?${params.toString()}`)
+ fetch(`/api/filterJobCards?${params.toString()}`)
   .then(res => {
     console.log(res);
     if(!res.ok){
@@ -184,18 +184,17 @@ display: {
   document.getElementById('clear-filter').addEventListener('click', (e) => {
     e.preventDefault();
 
+ 
     
     number.selectedIndex = 0;
     transport.selectedIndex = 0;
     vehicle.selectedIndex = 0;
 
-    //  number.value = '';
-    //  transport.value = '';
-    //  vehicle.value = '';
 
      fetch('/api/getJobCards')
      .then(res =>res.json())
      .then(data =>{
+       console.log('Filter response:', data); 
       if(data.success && Array.isArray(data.result)){
         const loadData = data.result.map(item => [
           item.Number,
